@@ -1,0 +1,129 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.43350908025776214,
+		"split_panel0": {
+			"split_ratio": 0.5,
+			"split_panel0": {
+				"panelTypes": [
+					"viewer"
+				],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"camera": "/cameras/cameras:sopGroup/perspectiveCamera_DEBUG",
+					"linkIndex": 1
+				}
+			},
+			"split_panel1": {
+				"panelTypes": [
+					"params"
+				],
+				"currentPanelIndex": 0,
+				"panel_data": {
+					"active_folder": 102,
+					"linkIndex": 1
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"panelTypes": [
+				"network",
+				"params",
+				"viewer"
+			],
+			"currentPanelIndex": 0,
+			"panel_data": {
+				"camera": {
+					"position": {
+						"x": 185.58079973725378,
+						"y": -2.6702189509622336
+					},
+					"zoom": 0.6809090576171877
+				},
+				"history": {
+					"2": {
+						"position": {
+							"x": -23.967939803589367,
+							"y": -47.367124853016485
+						},
+						"zoom": 0.6809090576171877
+					},
+					"167": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.6809090576171877
+					},
+					"208": {
+						"position": {
+							"x": 185.58079973725378,
+							"y": -2.6702189509622336
+						},
+						"zoom": 0.6809090576171877
+					},
+					"332": {
+						"position": {
+							"x": 0,
+							"y": 0
+						},
+						"zoom": 0.6809090576171877
+					}
+				},
+				"linkIndex": 1
+			}
+		},
+		"split_mode": "horizontal"
+	},
+	"currentNodes": [
+		"/cameras",
+		"/",
+		"/",
+		"/",
+		"/",
+		"/",
+		"/",
+		"/"
+	],
+	"navigationHistory": {
+		"nodePaths": {
+			"1": [
+				"/cameras",
+				"/",
+				"/lights",
+				"/",
+				"/lavalamp",
+				"/",
+				"/cameras",
+				"/",
+				"/cameras"
+			],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": []
+		},
+		"index": {
+			"1": 8,
+			"2": -1,
+			"3": -1,
+			"4": -1,
+			"5": -1,
+			"6": -1,
+			"7": -1,
+			"8": -1
+		}
+	},
+	"fullscreenPanelId": null,
+	"saveOptions": {
+		"createExport": true,
+		"skipExportSinceRemoteAssetsPresents": false,
+		"compressJs": true,
+		"createZip": false,
+		"publishToIntegrations": false
+	},
+	"paramsModal": []
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta property="og:title" content="lavalamp_01" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="./polygonjs/screenshots/scenes/lavalamp_01/poster.png" />
+		<meta property="og:url" content="https://polygonjs.com" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="og:description" content="a WebGL experience created with @polygonjs" />
+		<meta property="og:site_name" content="a WebGL experience created with @polygonjs" />
+		<meta name="twitter:image:alt" content="a WebGL experience created with @polygonjs" />
+		<meta name="twitter:site" content="@polygonjs" />
+		<title>lavalamp_01</title>
+
+		<style id="polygonjs-default">
+			html,
+			body,
+			.polygonjs-app {
+				margin: 0px;
+				height: 100%;
+				overflow: hidden;
+				display: block;
+			}
+			.polygonjs-app canvas {
+				display: block;
+				height: 100%;
+				user-select: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+			}
+			.polygonjs-app canvas.active {
+				cursor: pointer;
+			}
+		</style>
+
+		<style id="polygonjs-progress-bar-stylesheet">
+			/* POSTER */
+			#polygonjs-loading-poster {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				height: 100%;
+				width: 100%;
+			}
+			#polygonjs-loading-poster {
+				pointer-events: none;
+				background: url('./polygonjs/screenshots/scenes/lavalamp_01/poster.png') no-repeat center center;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				opacity: 1;
+				transition: opacity 0.8s ease-in-out;
+				-webkit-transition: opacity 0.8s ease-in-out;
+				-moz-transition: opacity 0.8s ease-in-out;
+				-ms-transition: opacity 0.8s ease-in-out;
+				-o-transition: opacity 0.8s ease-in-out;
+			}
+			#polygonjs-loading-poster.fade-out {
+				opacity: 0;
+			}
+
+			/* PROGRESS BAR */
+			.polygonjs-progress-bar-container {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 8px;
+				pointer-events: none;
+			}
+			.polygonjs-progress-bar-container .polygonjs-progress-bar {
+				height: 100%;
+				width: 0%;
+				animation-name: progress-bar-color;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+			.fadeable {
+				opacity: 1;
+				transition: opacity 0.5s ease-in-out;
+			}
+			.visible {
+				opacity: 1;
+			}
+			.hidden {
+				opacity: 0;
+			}
+
+			@keyframes progress-bar-color {
+				0% {
+					background-color: rgb(115, 214, 115);
+				}
+				50% {
+					background-color: rgb(60, 60, 211);
+				}
+				100% {
+					background-color: rgb(115, 214, 115);
+				}
+			}
+		</style>
+
+		<script id="load-scene-lavalamp_01" type="module">
+			import {loadSceneAndMountAsync_lavalamp_01} from './polygonjs/js/lavalamp_01/loadSceneAndMountAsync.js';
+
+			const container = document.getElementById('polygonjs-progress-bar-container');
+			const barElement = document.getElementById('polygonjs-progress-bar');
+			const poster = document.getElementById('polygonjs-loading-poster');
+			const updateProgressBar = function updateProgressBarTop(progress) {
+				if (!(barElement && container && poster)) {
+					console.log('progress bar elements missing', barElement, container, poster);
+					return;
+				}
+				if (progress < 1) {
+					const percent = Math.round(progress * 100) + '%';
+					barElement.style.width = percent;
+				} else {
+					// when we reach 1, we can remove the progress bar and fade out the poster
+					if (container.parentElement) {
+						container.parentElement.removeChild(container);
+					}
+					if (poster) {
+						poster.classList.add('fade-out');
+						setTimeout(() => {
+							if (poster.parentElement) {
+								poster.parentElement.removeChild(poster);
+							}
+						}, 1200);
+					}
+				}
+			};
+
+			function onProgress(progress) {
+				if (window.POLY && window.POLY.onLoadingProgress_lavalamp_01) {
+					window.POLY.onLoadingProgress_lavalamp_01(progress);
+				}
+				updateProgressBar(progress);
+			}
+
+			document.addEventListener('DOMContentLoaded', async () => {
+				const domElement = document.getElementById('polygonjs-app-lavalamp_01');
+				if (!domElement) {
+					console.error("element 'polygonjs-app-lavalamp_01' not found");
+					return;
+				}
+				const loadedData = await loadSceneAndMountAsync_lavalamp_01({
+					autoPlay: true,
+					onProgress,
+					domElement,
+					moduleImportSuffix: '.js',
+				});
+				if (window.POLY && window.POLY.onSceneReady_lavalamp_01) {
+					window.POLY.onSceneReady_lavalamp_01(loadedData);
+				}
+			});
+		</script>
+		<link rel="preload" href="./polygonjs/screenshots/scenes/lavalamp_01/poster.png" as="image" />
+		<link
+			rel="preload"
+			href="polygonjs/js/lavalamp_01/loadSceneAndMountAsync.js?t=1660476688153"
+			as="script"
+			crossorigin
+		/>
+		<link rel="preload" href="polygonjs/js/lavalamp_01/loadSceneAsync.js?t=1660476688153" as="script" crossorigin />
+		<link rel="preload" href="polygonjs/js/lavalamp_01/chunk-VDLWCXQU.js" as="script" crossorigin />
+		<link rel="preload" href="polygonjs/js/lavalamp_01/chunk-WSI7H36X.js" as="script" crossorigin />
+		<link rel="preload" href="polygonjs/scenes/lavalamp_01/root.json?t=1660476688903" as="fetch" crossorigin />
+		<link
+			rel="preload"
+			href="polygonjs/scenes/lavalamp_01/properties.json?t=1660476688903"
+			as="fetch"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="polygonjs/scenes/lavalamp_01/root/lavalamp.json?t=1660476688903"
+			as="fetch"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="polygonjs/scenes/lavalamp_01/root/cameras.json?t=1660476688903"
+			as="fetch"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="polygonjs/scenes/lavalamp_01/root/cameras/cameraControls1.json?t=1660476688903"
+			as="fetch"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="polygonjs/scenes/lavalamp_01/root/lights.json?t=1660476688903"
+			as="fetch"
+			crossorigin
+		/>
+	</head>
+	<body>
+		<div id="polygonjs-app-lavalamp_01" class="polygonjs-app"></div>
+
+		<div id="polygonjs-loading-poster"></div>
+		<div id="polygonjs-progress-bar-container" class="polygonjs-progress-bar-container fadeable">
+			<div id="polygonjs-progress-bar" class="polygonjs-progress-bar"></div>
+		</div>
+	</body>
+	<script>
+		document.addEventListener('POLYSceneReady', (event) => {
+			window.scene = event.detail.scene;
+		});
+		// you can uncomment the following to have access to the viewer globally
+		// document.addEventListener('POLYViewerMounted', (event)=>{
+		// 	window.viewer = event.detail.viewer;
+		// })
+	</script>
+</html>

@@ -1,0 +1,34 @@
+{
+	"type": "geo",
+	"nodes": {
+		"perspectiveCamera_MAIN": {
+			"type": "perspectiveCamera"
+		},
+		"perspectiveCamera_DEBUG": {
+			"type": "perspectiveCamera",
+			"params": {
+				"position": [
+					0,
+					1.7,
+					5
+				]
+			}
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": [
+				"cameraControls1",
+				"perspectiveCamera_MAIN"
+			],
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	},
+	"selection": [
+		"merge1"
+	]
+}

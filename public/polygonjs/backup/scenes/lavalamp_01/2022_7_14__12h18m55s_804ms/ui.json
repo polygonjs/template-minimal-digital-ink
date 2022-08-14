@@ -1,0 +1,46 @@
+{
+	"nodes": {
+		"hemisphereLight1": {
+			"pos": [
+				150,
+				100
+			]
+		},
+		"perspectiveCamera1": {
+			"pos": [
+				-200,
+				100
+			],
+			"nodes": {
+				"events1": {
+					"pos": [
+						-200,
+						50
+					],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [
+								150,
+								50
+							]
+						}
+					}
+				}
+			}
+		},
+		"grid": {
+			"pos": [
+				-50,
+				-150
+			],
+			"nodes": {
+				"planeHelper1": {
+					"pos": [
+						-200,
+						-50
+					]
+				}
+			}
+		}
+	}
+}

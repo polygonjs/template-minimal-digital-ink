@@ -1,0 +1,8 @@
+{
+	"type": "root",
+	"nodes": {},
+	"params": {
+		"backgroundMode": 0,
+		"mainCameraPath": "/perspectiveCamera1"
+	}
+}

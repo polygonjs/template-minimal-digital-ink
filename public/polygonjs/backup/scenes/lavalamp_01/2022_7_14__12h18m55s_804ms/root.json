@@ -1,0 +1,14 @@
+{
+	"type": "root",
+	"nodes": {
+		"hemisphereLight1": {
+			"type": "hemisphereLight",
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"params": {
+		"mainCameraPath": "/perspectiveCamera1"
+	}
+}
