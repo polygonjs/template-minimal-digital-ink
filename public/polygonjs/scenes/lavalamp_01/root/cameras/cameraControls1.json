@@ -2,7 +2,14 @@
 	"type": "cameraControls",
 	"nodes": {
 		"cameraOrbitControls1": {
-			"type": "cameraOrbitControls"
+			"type": "cameraOrbitControls",
+			"params": {
+				"target": [
+					0.08973345213304776,
+					-0.23130649469394027,
+					-0.9083223890450818
+				]
+			}
 		}
 	},
 	"params": {

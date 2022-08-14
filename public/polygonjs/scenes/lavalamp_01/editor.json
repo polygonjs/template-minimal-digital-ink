@@ -19,7 +19,7 @@
 				],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 102,
+					"active_folder": null,
 					"linkIndex": 1
 				}
 			},
@@ -35,18 +35,53 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 185.58079973725378,
-						"y": -2.6702189509622336
+						"x": 707.0607848881856,
+						"y": -35.80411972632993
 					},
-					"zoom": 0.6809090576171877
+					"zoom": 0.5390908813476568
 				},
 				"history": {
 					"2": {
 						"position": {
-							"x": -23.967939803589367,
-							"y": -47.367124853016485
+							"x": 113.54873954084312,
+							"y": -38.021313705773395
 						},
 						"zoom": 0.6809090576171877
+					},
+					"34": {
+						"position": {
+							"x": 466.1756241922149,
+							"y": -543.8610156962785
+						},
+						"zoom": 0.6936364440917973
+					},
+					"60": {
+						"position": {
+							"x": 301.7357274739884,
+							"y": 48.0641203928213
+						},
+						"zoom": 0.6809090576171877
+					},
+					"86": {
+						"position": {
+							"x": 85.68087580384893,
+							"y": -34.57945642592418
+						},
+						"zoom": 0.6809090576171877
+					},
+					"141": {
+						"position": {
+							"x": 0,
+							"y": -200
+						},
+						"zoom": 0.6936364440917973
+					},
+					"154": {
+						"position": {
+							"x": 707.0607848881856,
+							"y": -35.80411972632993
+						},
+						"zoom": 0.5390908813476568
 					},
 					"167": {
 						"position": {
@@ -68,6 +103,55 @@
 							"y": 0
 						},
 						"zoom": 0.6809090576171877
+					},
+					"461": {
+						"position": {
+							"x": -67.48466004973203,
+							"y": -112.26995223269027
+						},
+						"zoom": 0.5927272949218751
+					},
+					"464": {
+						"position": {
+							"x": 126.46379413237841,
+							"y": -22.248295019607397
+						},
+						"zoom": 0.7763635864257815
+					},
+					"476": {
+						"position": {
+							"x": -147.5410145377246,
+							"y": -49.18029887088311
+						},
+						"zoom": 0.7763635864257815
+					},
+					"558": {
+						"position": {
+							"x": 126.46379413237841,
+							"y": -22.248295019607397
+						},
+						"zoom": 0.7763635864257815
+					},
+					"589": {
+						"position": {
+							"x": -258.92810331527414,
+							"y": -658.105744926437
+						},
+						"zoom": 0.7327274932861333
+					},
+					"1135": {
+						"position": {
+							"x": 241.6861131667198,
+							"y": -110.07020394198366
+						},
+						"zoom": 0.7763635864257815
+					},
+					"1592": {
+						"position": {
+							"x": -147.08526542013965,
+							"y": -375.14505738767997
+						},
+						"zoom": 0.7427273254394539
 					}
 				},
 				"linkIndex": 1
@@ -76,7 +160,7 @@
 		"split_mode": "horizontal"
 	},
 	"currentNodes": [
-		"/cameras",
+		"/lavalamp/MAT/rayMarchingBuilder1",
 		"/",
 		"/",
 		"/",
@@ -88,15 +172,106 @@
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/cameras",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/COP",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/",
+				"/lavalamp",
+				"/lavalamp/COP",
+				"/lavalamp",
 				"/",
 				"/lights",
 				"/",
 				"/lavalamp",
+				"/lavalamp/COP",
+				"/lavalamp",
+				"/",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/COP",
+				"/lavalamp",
 				"/",
 				"/cameras",
 				"/",
-				"/cameras"
+				"/lavalamp",
+				"/",
+				"/lavalamp",
+				"/",
+				"/lavalamp",
+				"/lavalamp/COP",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/",
+				"/cameras",
+				"/",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/",
+				"/lights",
+				"/",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/actor1",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/actor1",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/lavalamp/actor1",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1",
+				"/lavalamp/MAT",
+				"/lavalamp",
+				"/",
+				"/cameras",
+				"/",
+				"/lavalamp",
+				"/lavalamp/MAT",
+				"/lavalamp/MAT/rayMarchingBuilder1"
 			],
 			"2": [],
 			"3": [],
@@ -107,7 +282,7 @@
 			"8": []
 		},
 		"index": {
-			"1": 8,
+			"1": 99,
 			"2": -1,
 			"3": -1,
 			"4": -1,
@@ -119,9 +294,9 @@
 	},
 	"fullscreenPanelId": null,
 	"saveOptions": {
-		"createExport": true,
+		"createExport": false,
 		"skipExportSinceRemoteAssetsPresents": false,
-		"compressJs": true,
+		"compressJs": false,
 		"createZip": false,
 		"publishToIntegrations": false
 	},

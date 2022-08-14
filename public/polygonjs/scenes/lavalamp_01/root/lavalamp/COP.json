@@ -1,0 +1,11 @@
+{
+	"type": "copNetwork",
+	"nodes": {
+		"imageEXR_envMap": {
+			"type": "imageEXR",
+			"params": {
+				"url": "textures/christmas_photo_studio_01_1k.exr?timestamp=1660502953438"
+			}
+		}
+	}
+}

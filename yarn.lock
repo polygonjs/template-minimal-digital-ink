@@ -1087,10 +1087,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@polygonjs/polygonjs@1.2.7":
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/@polygonjs/polygonjs/-/polygonjs-1.2.7.tgz#0f5fd60b62e96b65736f751964c59b04242d4943"
-  integrity sha512-asVOdz/bNF/77f9ncrZcfTlZ/p8Q/CKm6I9hoAu1xw4yQVnTIz1BTPSLQiyI2oYVdOohKzRB5MU3gjZJ212Shw==
+"@polygonjs/polygonjs@1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@polygonjs/polygonjs/-/polygonjs-1.2.8.tgz#031e7a0848441b533ddf6cb3443469512e1a1c81"
+  integrity sha512-14Y2Vn9jcWYSqLy+OSf+j9pdAJMO0qBKv3xEkmbaZ+lvEJVyhwGLiDirfi8iSgJ7SvbSNfuzmV/vSkm/WG9jBw==
   dependencies:
     "@jscad/modeling" "2.9.3"
     "@types/three" "0.139.0"
@@ -5065,12 +5065,12 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
-polygonjs-editor@^1.2.7-1:
-  version "1.2.7-1"
-  resolved "https://registry.yarnpkg.com/polygonjs-editor/-/polygonjs-editor-1.2.7-1.tgz#390cfc2d65ecd4bc9c8a2162e63e75ffd0488063"
-  integrity sha512-Az6/UyF4racT9gji91NrFnUtMTE7aWpmJK8HH7ZAZCLqBnz43XTdoyODwwl0XIWIHWD4WFDnTnvr2bcEs7pyAA==
+polygonjs-editor@^1.2.8-2:
+  version "1.2.8-2"
+  resolved "https://registry.yarnpkg.com/polygonjs-editor/-/polygonjs-editor-1.2.8-2.tgz#a2c7861a56fc8c9bad60733f8984e3102179a6fa"
+  integrity sha512-vcYiuhJ1CNTFY0zfZKdrE3mWn5I0kLm6ywC8D4dmwKlCbnTdqQY1uw298HA1084v+xnJyySzU525rlg6sP4T3A==
   dependencies:
-    "@polygonjs/polygonjs" "1.2.7"
+    "@polygonjs/polygonjs" "1.2.8"
     btoa "1.2.1"
     chalk "4.1.0"
     cors "2.8.5"

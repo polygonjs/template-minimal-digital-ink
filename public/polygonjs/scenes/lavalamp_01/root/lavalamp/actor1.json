@@ -1,0 +1,256 @@
+{
+	"type": "actor",
+	"nodes": {
+		"onTick1": {
+			"type": "onTick"
+		},
+		"rayFromCursor1": {
+			"type": "rayFromCursor",
+			"params": {
+				"element": 1
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "ray",
+						"type": "Ray",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"rayIntersectPlane1": {
+			"type": "rayIntersectPlane",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "rayFromCursor1",
+					"output": "ray"
+				},
+				{
+					"index": 1,
+					"node": "plane1",
+					"output": "plane"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "Ray",
+						"type": "Ray",
+						"isArray": false
+					},
+					{
+						"name": "Plane",
+						"type": "Plane",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "position",
+						"type": "Vector3",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"plane1": {
+			"type": "plane",
+			"params": {
+				"normal": [
+					0,
+					0,
+					1
+				]
+			}
+		},
+		"setMaterialUniform1": {
+			"type": "setMaterialUniform",
+			"params": {
+				"name": "pos1",
+				"type": 3,
+				"lerp": 0.21,
+				"Vector3": {
+					"type": "vector3",
+					"default_value": [
+						0,
+						0,
+						0
+					],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Material",
+						"type": "Material",
+						"isArray": false
+					},
+					{
+						"name": "Vector3",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"setMaterialUniform2": {
+			"type": "setMaterialUniform",
+			"params": {
+				"name": "pos2",
+				"type": 3,
+				"lerp": 0.06,
+				"Vector3": {
+					"type": "vector3",
+					"default_value": [
+						0,
+						0,
+						0
+					],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Material",
+						"type": "Material",
+						"isArray": false
+					},
+					{
+						"name": "Vector3",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					}
+				]
+			}
+		},
+		"setMaterialUniform3": {
+			"type": "setMaterialUniform",
+			"params": {
+				"name": "pos3",
+				"type": 3,
+				"lerp": 0.01,
+				"Vector3": {
+					"type": "vector3",
+					"default_value": [
+						0,
+						0,
+						0
+					],
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"maxInputsCount": 3,
+			"inputs": [
+				{
+					"index": 0,
+					"node": "onTick1",
+					"output": "trigger"
+				},
+				null,
+				{
+					"index": 2,
+					"node": "rayIntersectPlane1",
+					"output": "position"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					},
+					{
+						"name": "Material",
+						"type": "Material",
+						"isArray": false
+					},
+					{
+						"name": "Vector3",
+						"type": "Vector3",
+						"isArray": false
+					}
+				],
+				"out": [
+					{
+						"name": "trigger",
+						"type": "trigger",
+						"isArray": false
+					}
+				]
+			}
+		}
+	},
+	"inputs": [
+		"material3"
+	],
+	"flags": {
+		"display": true
+	}
+}

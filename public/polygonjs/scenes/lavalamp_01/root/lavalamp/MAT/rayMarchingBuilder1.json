@@ -1,0 +1,2716 @@
+{
+	"type": "rayMarchingBuilder",
+	"nodes": {
+		"globals1": {
+			"type": "globals"
+		},
+		"output1": {
+			"type": "output",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFContext1",
+					"output": "SDFContext"
+				}
+			]
+		},
+		"SDFContext1": {
+			"type": "SDFContext",
+			"params": {
+				"sdf": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"material": {
+					"type": "string",
+					"default_value": "DefaultSDFMaterial()",
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFUnion5",
+					"output": "union"
+				},
+				{
+					"index": 1,
+					"node": "SDFMaterial1",
+					"output": "SDFMaterial"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sdf",
+						"type": "float"
+					},
+					{
+						"name": "material",
+						"type": "SDFMaterial"
+					}
+				],
+				"out": [
+					{
+						"name": "SDFContext",
+						"type": "SDFContext"
+					}
+				]
+			}
+		},
+		"SDFMaterial1": {
+			"type": "SDFMaterial",
+			"params": {
+				"color": {
+					"overriden_options": {}
+				},
+				"useEnvMap": {
+					"raw_input": 1,
+					"overriden_options": {}
+				},
+				"envMapTint": {
+					"overriden_options": {}
+				},
+				"envMapIntensity": {
+					"overriden_options": {}
+				},
+				"envMapFresnel": {
+					"raw_input": 1,
+					"overriden_options": {}
+				},
+				"envMapFresnelPower": {
+					"raw_input": 2.6,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "constant1",
+					"output": "val"
+				}
+			]
+		},
+		"SDFSphere1": {
+			"type": "SDFSphere",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [
+						-0.1,
+						5.2,
+						0
+					],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.46,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals2",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "floatToVec3_2",
+					"output": "vec3"
+				}
+			]
+		},
+		"SDFSphere2": {
+			"type": "SDFSphere",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [
+						0.1,
+						4.6,
+						0
+					],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.36,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "floatToVec3_1",
+					"output": "vec3"
+				}
+			]
+		},
+		"SDFUnion1": {
+			"type": "SDFUnion",
+			"params": {
+				"sdf0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sdf1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"smooth": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 1
+				},
+				"smoothFactor": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.3
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFSphere1",
+					"output": "float"
+				},
+				{
+					"index": 1,
+					"node": "SDFSphere2",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sdf0",
+						"type": "float"
+					},
+					{
+						"name": "sdf1",
+						"type": "float"
+					},
+					{
+						"name": "smooth",
+						"type": "bool"
+					},
+					{
+						"name": "smoothFactor",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "union",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"constant1": {
+			"type": "constant",
+			"params": {
+				"type": 4,
+				"color": [
+					1,
+					1,
+					1
+				],
+				"asColor": 1
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"sin1": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd1": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": -1.7
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd2": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"floatToVec3_1": {
+			"type": "floatToVec3",
+			"params": {
+				"x": {
+					"overriden_options": {}
+				},
+				"y": {
+					"overriden_options": {}
+				},
+				"z": {
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd10",
+					"output": "val"
+				},
+				{
+					"index": 1,
+					"node": "multAdd2",
+					"output": "val"
+				}
+			]
+		},
+		"sin2": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd3",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd3": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 1.6
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.6
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals2",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd4": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin2",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"floatToVec3_2": {
+			"type": "floatToVec3",
+			"params": {
+				"x": {
+					"overriden_options": {}
+				},
+				"y": {
+					"overriden_options": {}
+				},
+				"z": {
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd6",
+					"output": "val"
+				},
+				{
+					"index": 1,
+					"node": "multAdd4",
+					"output": "val"
+				},
+				{
+					"index": 2,
+					"node": "multAdd8",
+					"output": "val"
+				}
+			]
+		},
+		"sin3": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd5",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd5": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": -3.5
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.37
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals2",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd6": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.35
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin3",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"sin4": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd7",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd7": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.5
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.16
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals2",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd8": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 1.2
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin4",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"sin5": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd9",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd9": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 4.6
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.88
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd10": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.31
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin5",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"globals2": {
+			"type": "globals"
+		},
+		"globals3": {
+			"type": "globals"
+		},
+		"SDFSphere3": {
+			"type": "SDFSphere",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [
+						0.1,
+						4.6,
+						0
+					],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.36,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals3",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "floatToVec3_3",
+					"output": "vec3"
+				}
+			]
+		},
+		"sin6": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd11",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd11": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": -13.700000000000001
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.2
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals3",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd12": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin6",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"floatToVec3_3": {
+			"type": "floatToVec3",
+			"params": {
+				"x": {
+					"overriden_options": {}
+				},
+				"y": {
+					"overriden_options": {}
+				},
+				"z": {
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd14",
+					"output": "val"
+				},
+				{
+					"index": 1,
+					"node": "multAdd12",
+					"output": "val"
+				},
+				{
+					"index": 2,
+					"node": "multAdd16",
+					"output": "val"
+				}
+			]
+		},
+		"sin7": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd13",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd13": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.31
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.64
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals3",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd14": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.31
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin7",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"SDFUnion2": {
+			"type": "SDFUnion",
+			"params": {
+				"sdf0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sdf1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"smooth": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 1
+				},
+				"smoothFactor": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.25
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFUnion1",
+					"output": "union"
+				},
+				{
+					"index": 1,
+					"node": "SDFSphere3",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sdf0",
+						"type": "float"
+					},
+					{
+						"name": "sdf1",
+						"type": "float"
+					},
+					{
+						"name": "smooth",
+						"type": "bool"
+					},
+					{
+						"name": "smoothFactor",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "union",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"sin8": {
+			"type": "sin",
+			"params": {
+				"radians": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd15",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "radians",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd15": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": -1.7
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 1.3
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals3",
+					"output": "time"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd16": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.53
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "sin8",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"SDFSphere4": {
+			"type": "SDFSphere",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [
+						0.1,
+						4.6,
+						0
+					],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.36,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals4",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "param1",
+					"output": "val"
+				}
+			]
+		},
+		"SDFUnion3": {
+			"type": "SDFUnion",
+			"params": {
+				"sdf0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sdf1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"smooth": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": true
+				},
+				"smoothFactor": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.28
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFUnion2",
+					"output": "union"
+				},
+				{
+					"index": 1,
+					"node": "SDFSphere4",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sdf0",
+						"type": "float"
+					},
+					{
+						"name": "sdf1",
+						"type": "float"
+					},
+					{
+						"name": "smooth",
+						"type": "bool"
+					},
+					{
+						"name": "smoothFactor",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "union",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"param1": {
+			"type": "param",
+			"params": {
+				"name": "pos1",
+				"type": 4
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"SDFSphere5": {
+			"type": "SDFSphere",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [
+						0.1,
+						4.6,
+						0
+					],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.2,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals5",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "param2",
+					"output": "val"
+				}
+			]
+		},
+		"param2": {
+			"type": "param",
+			"params": {
+				"name": "pos2",
+				"type": 4
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"globals5": {
+			"type": "globals"
+		},
+		"SDFUnion4": {
+			"type": "SDFUnion",
+			"params": {
+				"sdf0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sdf1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"smooth": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": true
+				},
+				"smoothFactor": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.28
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFUnion3",
+					"output": "union"
+				},
+				{
+					"index": 1,
+					"node": "SDFSphere5",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sdf0",
+						"type": "float"
+					},
+					{
+						"name": "sdf1",
+						"type": "float"
+					},
+					{
+						"name": "smooth",
+						"type": "bool"
+					},
+					{
+						"name": "smoothFactor",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "union",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"SDFSphere6": {
+			"type": "SDFSphere",
+			"params": {
+				"position": {
+					"overriden_options": {}
+				},
+				"center": {
+					"raw_input": [
+						0.1,
+						4.6,
+						0
+					],
+					"overriden_options": {}
+				},
+				"radius": {
+					"raw_input": 0.2,
+					"overriden_options": {}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals6",
+					"output": "position"
+				},
+				{
+					"index": 1,
+					"node": "param3",
+					"output": "val"
+				}
+			]
+		},
+		"param3": {
+			"type": "param",
+			"params": {
+				"name": "pos3",
+				"type": 4
+			},
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec3"
+					}
+				]
+			}
+		},
+		"globals6": {
+			"type": "globals"
+		},
+		"SDFUnion5": {
+			"type": "SDFUnion",
+			"params": {
+				"sdf0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"sdf1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": false
+					}
+				},
+				"smooth": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": true
+				},
+				"smoothFactor": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.28
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "SDFUnion4",
+					"output": "union"
+				},
+				{
+					"index": 1,
+					"node": "SDFSphere6",
+					"output": "float"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "sdf0",
+						"type": "float"
+					},
+					{
+						"name": "sdf1",
+						"type": "float"
+					},
+					{
+						"name": "smooth",
+						"type": "bool"
+					},
+					{
+						"name": "smoothFactor",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "union",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"globals4": {
+			"type": "globals"
+		}
+	},
+	"params": {
+		"envTexture1": {
+			"type": "node_path",
+			"default_value": "",
+			"options": {
+				"spare": true,
+				"computeOnDirty": true,
+				"cook": false,
+				"dependentOnFoundNode": true,
+				"nodeSelection": {
+					"context": "cop"
+				}
+			},
+			"raw_input": "../../COP/imageEXR_envMap",
+			"overriden_options": {
+				"callback": "{}",
+				"nodeSelection": "{\"context\":\"cop\"}"
+			}
+		},
+		"pos1": {
+			"type": "vector3",
+			"default_value": [
+				0,
+				0,
+				0
+			],
+			"options": {
+				"spare": true,
+				"computeOnDirty": true,
+				"cook": false,
+				"dependentOnFoundNode": true
+			},
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"pos2": {
+			"type": "vector3",
+			"default_value": [
+				0,
+				0,
+				0
+			],
+			"options": {
+				"spare": true,
+				"computeOnDirty": true,
+				"cook": false,
+				"dependentOnFoundNode": true
+			},
+			"overriden_options": {
+				"callback": "{}"
+			}
+		},
+		"pos3": {
+			"type": "vector3",
+			"default_value": [
+				0,
+				0,
+				0
+			],
+			"options": {
+				"spare": true,
+				"computeOnDirty": true,
+				"cook": false,
+				"dependentOnFoundNode": true
+			},
+			"overriden_options": {
+				"callback": "{}"
+			}
+		}
+	},
+	"persisted_config": {
+		"material": {
+			"metadata": {
+				"version": 4.5,
+				"type": "Material",
+				"generator": "Material.toJSON"
+			},
+			"uuid": "/lavalamp/MAT/rayMarchingBuilder1-main",
+			"type": "ShaderMaterial",
+			"name": "/lavalamp/MAT/rayMarchingBuilder1",
+			"color": 16777215,
+			"side": 1,
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"alphaTest": 0.5,
+			"glslVersion": null,
+			"uniforms": {
+				"diffuse": {
+					"type": "c",
+					"value": 16777215
+				},
+				"opacity": {
+					"value": 1
+				},
+				"map": {
+					"value": null
+				},
+				"uvTransform": {
+					"type": "m3",
+					"value": [
+						1,
+						0,
+						0,
+						0,
+						1,
+						0,
+						0,
+						0,
+						1
+					]
+				},
+				"uv2Transform": {
+					"type": "m3",
+					"value": [
+						1,
+						0,
+						0,
+						0,
+						1,
+						0,
+						0,
+						0,
+						1
+					]
+				},
+				"alphaMap": {
+					"value": null
+				},
+				"alphaTest": {
+					"value": 0
+				},
+				"envMap": {
+					"value": null
+				},
+				"flipEnvMap": {
+					"value": -1
+				},
+				"reflectivity": {
+					"value": 1
+				},
+				"ior": {
+					"value": 1.5
+				},
+				"refractionRatio": {
+					"value": 0.98
+				},
+				"aoMap": {
+					"value": null
+				},
+				"aoMapIntensity": {
+					"value": 1
+				},
+				"lightMap": {
+					"value": null
+				},
+				"lightMapIntensity": {
+					"value": 1
+				},
+				"emissiveMap": {
+					"value": null
+				},
+				"bumpMap": {
+					"value": null
+				},
+				"bumpScale": {
+					"value": 1
+				},
+				"normalMap": {
+					"value": null
+				},
+				"normalScale": {
+					"type": "v2",
+					"value": [
+						1,
+						1
+					]
+				},
+				"displacementMap": {
+					"value": null
+				},
+				"displacementScale": {
+					"value": 1
+				},
+				"displacementBias": {
+					"value": 0
+				},
+				"roughnessMap": {
+					"value": null
+				},
+				"metalnessMap": {
+					"value": null
+				},
+				"fogDensity": {
+					"value": 0.00025
+				},
+				"fogNear": {
+					"value": 1
+				},
+				"fogFar": {
+					"value": 2000
+				},
+				"fogColor": {
+					"type": "c",
+					"value": 16777215
+				},
+				"ambientLightColor": {
+					"value": [
+						0,
+						0,
+						0
+					]
+				},
+				"lightProbe": {
+					"value": [
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						}
+					]
+				},
+				"directionalLights": {
+					"value": []
+				},
+				"directionalLightShadows": {
+					"value": []
+				},
+				"directionalShadowMap": {
+					"value": []
+				},
+				"directionalShadowMatrix": {
+					"value": []
+				},
+				"spotLights": {
+					"value": [
+						{
+							"position": {
+								"x": -1.8945102831759817,
+								"y": 2.4752261249433287,
+								"z": -12.278630388990798
+							},
+							"direction": {
+								"x": -0.23651813772484168,
+								"y": 0.3090169943749476,
+								"z": -0.9211773269651433
+							},
+							"color": 16777215,
+							"distance": 100,
+							"coneCos": 0.7071067811865476,
+							"penumbraCos": 0.7604059656000309,
+							"decay": 0.1
+						}
+					]
+				},
+				"spotLightShadows": {
+					"value": []
+				},
+				"spotShadowMap": {
+					"value": []
+				},
+				"spotShadowMatrix": {
+					"value": []
+				},
+				"pointLights": {
+					"value": []
+				},
+				"pointLightShadows": {
+					"value": []
+				},
+				"pointShadowMap": {
+					"value": []
+				},
+				"pointShadowMatrix": {
+					"value": []
+				},
+				"hemisphereLights": {
+					"value": []
+				},
+				"rectAreaLights": {
+					"value": []
+				},
+				"ltc_1": {
+					"value": null
+				},
+				"ltc_2": {
+					"value": null
+				},
+				"emissive": {
+					"type": "c",
+					"value": 0
+				},
+				"roughness": {
+					"value": 1
+				},
+				"metalness": {
+					"value": 0
+				},
+				"envMapIntensity": {
+					"value": 1
+				},
+				"MAX_STEPS": {
+					"value": 100
+				},
+				"MAX_DIST": {
+					"value": 100
+				},
+				"SURF_DIST": {
+					"value": 0.001
+				},
+				"spotLightsRayMarching": {
+					"value": [
+						{
+							"worldPos": {
+								"x": -1.8945102831759817,
+								"y": 2.4752261249433287,
+								"z": -7.378630388990797
+							}
+						}
+					]
+				},
+				"v_POLY_texture_envTexture1": {
+					"value": null
+				},
+				"v_POLY_param_pos1": {
+					"type": "v3",
+					"value": [
+						0,
+						0,
+						0
+					]
+				},
+				"v_POLY_param_pos2": {
+					"type": "v3",
+					"value": [
+						0,
+						0,
+						0
+					]
+				},
+				"v_POLY_param_pos3": {
+					"type": "v3",
+					"value": [
+						0,
+						0,
+						0
+					]
+				},
+				"time": {
+					"value": 0
+				}
+			},
+			"vertexShader": "precision highp float;\nprecision highp int;\n\nvarying vec3 vPw;\n\n#include <common>\n\n\n\n// /lavalamp/MAT/rayMarchingBuilder1/globals2\nuniform float time;\n\n\n\n\n\nvoid main()\t{\n\n\tvPw = (modelMatrix * vec4( position, 1.0 )).xyz;\n\tgl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\n\n}",
+			"fragmentShader": "precision highp float;\nprecision highp int;\n\n// --- applyMaterial constants definition\nuniform int MAX_STEPS;\nuniform float MAX_DIST;\nuniform float SURF_DIST;\n#define ZERO 0\n\n#include <common>\n\n\n\n// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere4\n// https://iquilezles.org/articles/distfunctions/\n\nfloat dot2( in vec2 v ) { return dot(v,v); }\nfloat dot2( in vec3 v ) { return dot(v,v); }\nfloat ndot( in vec2 a, in vec2 b ) { return a.x*b.x - a.y*b.y; }\n/*\n*\n* SDF PRIMITIVES\n*\n*/\nfloat sdSphere( vec3 p, float s )\n{\n\treturn length(p)-s;\n}\n\nfloat sdBox( vec3 p, vec3 b )\n{\n\tvec3 q = abs(p) - b;\n\treturn length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0);\n}\n\nfloat sdRoundBox( vec3 p, vec3 b, float r )\n{\n\tvec3 q = abs(p) - b;\n\treturn length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0) - r;\n}\n\nfloat sdBoxFrame( vec3 p, vec3 b, float e )\n{\n\t\tp = abs(p  )-b;\n\tvec3 q = abs(p+e)-e;\n\treturn min(min(\n\t\tlength(max(vec3(p.x,q.y,q.z),0.0))+min(max(p.x,max(q.y,q.z)),0.0),\n\t\tlength(max(vec3(q.x,p.y,q.z),0.0))+min(max(q.x,max(p.y,q.z)),0.0)),\n\t\tlength(max(vec3(q.x,q.y,p.z),0.0))+min(max(q.x,max(q.y,p.z)),0.0));\n}\n\nfloat sdPlane( vec3 p, vec3 n, float h )\n{\n\t// n must be normalized\n\treturn dot(p,n) + h;\n}\n\nfloat sdTorus( vec3 p, vec2 t )\n{\n\tvec2 q = vec2(length(p.xz)-t.x,p.y);\n\treturn length(q)-t.y;\n}\nfloat sdCappedTorus(in vec3 p, in vec2 sc, in float ra, in float rb)\n{\n\tp.x = abs(p.x);\n\tfloat k = (sc.y*p.x>sc.x*p.y) ? dot(p.xy,sc) : length(p.xy);\n\treturn sqrt( dot(p,p) + ra*ra - 2.0*ra*k ) - rb;\n}\nfloat sdLink( vec3 p, float le, float r1, float r2 )\n{\n  vec3 q = vec3( p.x, max(abs(p.y)-le,0.0), p.z );\n  return length(vec2(length(q.xy)-r1,q.z)) - r2;\n}\nfloat sdRhombus(vec3 p, float la, float lb, float h, float ra)\n{\n  p = abs(p);\n  vec2 b = vec2(la,lb);\n  float f = clamp( (ndot(b,b-2.0*p.xz))/dot(b,b), -1.0, 1.0 );\n  vec2 q = vec2(length(p.xz-0.5*b*vec2(1.0-f,1.0+f))*sign(p.x*b.y+p.z*b.x-b.x*b.y)-ra, p.y-h);\n  return min(max(q.x,q.y),0.0) + length(max(q,0.0));\n}\nfloat sdOctahedron( vec3 p, float s)\n{\n  p = abs(p);\n  float m = p.x+p.y+p.z-s;\n  vec3 q;\n       if( 3.0*p.x < m ) q = p.xyz;\n  else if( 3.0*p.y < m ) q = p.yzx;\n  else if( 3.0*p.z < m ) q = p.zxy;\n  else return m*0.57735027;\n    \n  float k = clamp(0.5*(q.z-q.y+s),0.0,s); \n  return length(vec3(q.x,q.y-s+k,q.z-k)); \n}\n\n/*\n*\n* SDF OPERATIONS\n*\n*/\nfloat SDFUnion( float d1, float d2 ) { return min(d1,d2); }\nfloat SDFSubtract( float d1, float d2 ) { return max(-d1,d2); }\nfloat SDFIntersect( float d1, float d2 ) { return max(d1,d2); }\n\nfloat SDFSmoothUnion( float d1, float d2, float k ) {\n\tfloat h = clamp( 0.5 + 0.5*(d2-d1)/k, 0.0, 1.0 );\n\treturn mix( d2, d1, h ) - k*h*(1.0-h);\n}\n\nfloat SDFSmoothSubtract( float d1, float d2, float k ) {\n\tfloat h = clamp( 0.5 - 0.5*(d2+d1)/k, 0.0, 1.0 );\n\treturn mix( d2, -d1, h ) + k*h*(1.0-h);\n}\n\nfloat SDFSmoothIntersect( float d1, float d2, float k ) {\n\tfloat h = clamp( 0.5 - 0.5*(d2-d1)/k, 0.0, 1.0 );\n\treturn mix( d2, d1, h ) + k*h*(1.0-h);\n}\n\n// /lavalamp/MAT/rayMarchingBuilder1/SDFMaterial1\nconst int _LAVALAMP_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1 = 178;\n\n\n\n\n\n\n\n// /lavalamp/MAT/rayMarchingBuilder1/globals2\nuniform float time;\n\n// /lavalamp/MAT/rayMarchingBuilder1/param1\nuniform vec3 v_POLY_param_pos1;\n\n// /lavalamp/MAT/rayMarchingBuilder1/param2\nuniform vec3 v_POLY_param_pos2;\n\n// /lavalamp/MAT/rayMarchingBuilder1/param3\nuniform vec3 v_POLY_param_pos3;\n\n// /lavalamp/MAT/rayMarchingBuilder1/SDFMaterial1\nuniform sampler2D v_POLY_texture_envTexture1;\n\n\n\n\n#include <lightmap_pars_fragment>\n#include <bsdfs>\n#include <lights_pars_begin>\n#include <lights_physical_pars_fragment>\n\n\n\n// uniform vec3 u_BoundingBoxMin;\n// uniform vec3 u_BoundingBoxMax;\n\n\nvarying vec3 vPw;\n\n#if NUM_SPOT_LIGHTS > 0\n\tstruct SpotLightRayMarching {\n\t\tvec3 worldPos;\n\t};\n\tuniform SpotLightRayMarching spotLightsRayMarching[ NUM_SPOT_LIGHTS ];\n#endif\n\nstruct SDFContext {\n\tfloat d;\n\tint matId;\n};\n\nSDFContext DefaultSDFContext(){\n\treturn SDFContext( 0.0, 0 );\n}\nint DefaultSDFMaterial(){\n\treturn 0;\n}\n\n\n\nSDFContext GetDist(vec3 p) {\n\tSDFContext sdfContext = SDFContext(0.0, 0);\n\n\t// start GetDist builder body code\n\n\n\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals2\n\tvec3 v_POLY_globals2_position = p;\n\tfloat v_POLY_globals2_time = time;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals1\n\tvec3 v_POLY_globals1_position = p;\n\tfloat v_POLY_globals1_time = time;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals3\n\tvec3 v_POLY_globals3_position = p;\n\tfloat v_POLY_globals3_time = time;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals4\n\tvec3 v_POLY_globals4_position = p;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/param1\n\tvec3 v_POLY_param1_val = v_POLY_param_pos1;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals5\n\tvec3 v_POLY_globals5_position = p;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/param2\n\tvec3 v_POLY_param2_val = v_POLY_param_pos2;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals6\n\tvec3 v_POLY_globals6_position = p;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/param3\n\tvec3 v_POLY_param3_val = v_POLY_param_pos3;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd5\n\tfloat v_POLY_multAdd5_val = (0.37*(v_POLY_globals2_time + -3.5)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd3\n\tfloat v_POLY_multAdd3_val = (0.6*(v_POLY_globals2_time + 1.6)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd7\n\tfloat v_POLY_multAdd7_val = (0.16*(v_POLY_globals2_time + 0.5)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd9\n\tfloat v_POLY_multAdd9_val = (0.88*(v_POLY_globals1_time + 4.6)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd1\n\tfloat v_POLY_multAdd1_val = (1.0*(v_POLY_globals1_time + -1.7)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd13\n\tfloat v_POLY_multAdd13_val = (0.64*(v_POLY_globals3_time + 0.31)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd11\n\tfloat v_POLY_multAdd11_val = (0.2*(v_POLY_globals3_time + -13.700000000000001)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd15\n\tfloat v_POLY_multAdd15_val = (1.3*(v_POLY_globals3_time + -1.7)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere4\n\tfloat v_POLY_SDFSphere4_float = sdSphere(v_POLY_globals4_position - v_POLY_param1_val, 0.36);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere5\n\tfloat v_POLY_SDFSphere5_float = sdSphere(v_POLY_globals5_position - v_POLY_param2_val, 0.2);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere6\n\tfloat v_POLY_SDFSphere6_float = sdSphere(v_POLY_globals6_position - v_POLY_param3_val, 0.2);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin3\n\tfloat v_POLY_sin3_val = sin(v_POLY_multAdd5_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin2\n\tfloat v_POLY_sin2_val = sin(v_POLY_multAdd3_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin4\n\tfloat v_POLY_sin4_val = sin(v_POLY_multAdd7_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin5\n\tfloat v_POLY_sin5_val = sin(v_POLY_multAdd9_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin1\n\tfloat v_POLY_sin1_val = sin(v_POLY_multAdd1_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin7\n\tfloat v_POLY_sin7_val = sin(v_POLY_multAdd13_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin6\n\tfloat v_POLY_sin6_val = sin(v_POLY_multAdd11_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin8\n\tfloat v_POLY_sin8_val = sin(v_POLY_multAdd15_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd6\n\tfloat v_POLY_multAdd6_val = (0.35*(v_POLY_sin3_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd4\n\tfloat v_POLY_multAdd4_val = (1.0*(v_POLY_sin2_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd8\n\tfloat v_POLY_multAdd8_val = (1.2*(v_POLY_sin4_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd10\n\tfloat v_POLY_multAdd10_val = (0.31*(v_POLY_sin5_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd2\n\tfloat v_POLY_multAdd2_val = (1.0*(v_POLY_sin1_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd14\n\tfloat v_POLY_multAdd14_val = (0.31*(v_POLY_sin7_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd12\n\tfloat v_POLY_multAdd12_val = (1.0*(v_POLY_sin6_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd16\n\tfloat v_POLY_multAdd16_val = (0.53*(v_POLY_sin8_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/floatToVec3_2\n\tvec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_multAdd6_val, v_POLY_multAdd4_val, v_POLY_multAdd8_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/floatToVec3_1\n\tvec3 v_POLY_floatToVec3_1_vec3 = vec3(v_POLY_multAdd10_val, v_POLY_multAdd2_val, 0.0);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/floatToVec3_3\n\tvec3 v_POLY_floatToVec3_3_vec3 = vec3(v_POLY_multAdd14_val, v_POLY_multAdd12_val, v_POLY_multAdd16_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere1\n\tfloat v_POLY_SDFSphere1_float = sdSphere(v_POLY_globals2_position - v_POLY_floatToVec3_2_vec3, 0.46);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere2\n\tfloat v_POLY_SDFSphere2_float = sdSphere(v_POLY_globals1_position - v_POLY_floatToVec3_1_vec3, 0.36);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere3\n\tfloat v_POLY_SDFSphere3_float = sdSphere(v_POLY_globals3_position - v_POLY_floatToVec3_3_vec3, 0.36);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion1\n\tfloat v_POLY_SDFUnion1_union = true ? SDFSmoothUnion(v_POLY_SDFSphere1_float, v_POLY_SDFSphere2_float, 0.3) : SDFUnion(v_POLY_SDFSphere1_float, v_POLY_SDFSphere2_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion2\n\tfloat v_POLY_SDFUnion2_union = true ? SDFSmoothUnion(v_POLY_SDFUnion1_union, v_POLY_SDFSphere3_float, 0.25) : SDFUnion(v_POLY_SDFUnion1_union, v_POLY_SDFSphere3_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion3\n\tfloat v_POLY_SDFUnion3_union = true ? SDFSmoothUnion(v_POLY_SDFUnion2_union, v_POLY_SDFSphere4_float, 0.28) : SDFUnion(v_POLY_SDFUnion2_union, v_POLY_SDFSphere4_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion4\n\tfloat v_POLY_SDFUnion4_union = true ? SDFSmoothUnion(v_POLY_SDFUnion3_union, v_POLY_SDFSphere5_float, 0.28) : SDFUnion(v_POLY_SDFUnion3_union, v_POLY_SDFSphere5_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion5\n\tfloat v_POLY_SDFUnion5_union = true ? SDFSmoothUnion(v_POLY_SDFUnion4_union, v_POLY_SDFSphere6_float, 0.28) : SDFUnion(v_POLY_SDFUnion4_union, v_POLY_SDFSphere6_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFContext1\n\tSDFContext v_POLY_SDFContext1_SDFContext = SDFContext(v_POLY_SDFUnion5_union, _LAVALAMP_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/output1\n\tsdfContext = v_POLY_SDFContext1_SDFContext;\n\n\n\n\t\n\n\treturn sdfContext;\n}\n\nSDFContext RayMarch(vec3 ro, vec3 rd) {\n\tSDFContext dO = SDFContext(0.,0);\n\n\tfor(int i=0; i<MAX_STEPS; i++) {\n\t\tvec3 p = ro + rd*dO.d;\n\t\tSDFContext sdfContext = GetDist(p);\n\t\tdO.d += sdfContext.d;\n\t\tdO.matId = sdfContext.matId;\n\t\tif(dO.d>MAX_DIST || sdfContext.d<SURF_DIST) break;\n\t}\n\n\treturn dO;\n}\n\nvec3 GetNormal(vec3 p) {\n\tSDFContext sdfContext = GetDist(p);\n\tvec2 e = vec2(.01, 0);\n\n\tvec3 n = sdfContext.d - vec3(\n\t\tGetDist(p-e.xyy).d,\n\t\tGetDist(p-e.yxy).d,\n\t\tGetDist(p-e.yyx).d);\n\n\treturn normalize(n);\n}\n\nvec3 GetLight(vec3 p, vec3 n) {\n\t#if NUM_SPOT_LIGHTS > 0\n\t\tvec3 dif = vec3(0.,0.,0.);\n\t\tSpotLightRayMarching spotLightRayMarching;\n\t\tSpotLight spotLight;\n\t\tvec3 lightPos,lightCol, l;\n\t\tfloat lighDif;\n\t\tSDFContext sdfContext;\n\t\t#pragma unroll_loop_start\n\t\tfor ( int i = 0; i < NUM_SPOT_LIGHTS; i ++ ) {\n\t\t\tspotLightRayMarching = spotLightsRayMarching[ i ];\n\t\t\tspotLight = spotLights[ i ];\n\t\t\tlightPos = spotLightRayMarching.worldPos;\n\t\t\tlightCol = spotLight.color;\n\t\t\tl = normalize(lightPos-p);\n\t\t\tlighDif = clamp(dot(n, l), 0., 1.);\n\t\t\tsdfContext = RayMarch(p+n*SURF_DIST*2., l);\n\t\t\tif(sdfContext.d<length(lightPos-p)) lighDif *= .1;\n\n\t\t\tdif += lightCol * lighDif;\n\t\t}\n\t\t#pragma unroll_loop_end\n\t\treturn dif;\n\t#else\n\t\treturn vec3(1.0, 1.0, 1.0);\n\t#endif\n}\n\n// https://iquilezles.org/articles/rmshadows\nfloat calcSoftshadow( in vec3 ro, in vec3 rd, float mint, float maxt, float k )\n{\n\tfloat res = 1.0;\n\tfloat ph = 1e20;\n\tfor( float t=mint; t<maxt; )\n\t{\n\t\tfloat h = GetDist(ro + rd*t).d;\n\t\tif( h<0.001 )\n\t\t\treturn 0.0;\n\t\tfloat y = h*h/(2.0*ph);\n\t\tfloat d = sqrt(h*h-y*y);\n\t\tres = min( res, k*d/max(0.0,t-y) );\n\t\tph = h;\n\t\tt += h;\n\t}\n\treturn res;\n}\n\n\nvec3 applyMaterial(vec3 p, vec3 n, vec3 rayDir, vec3 col, int mat){\n\n\t// start applyMaterial builder body code\n\n\n\n\t// /lavalamp/MAT/rayMarchingBuilder1/constant1\n\tvec3 v_POLY_constant1_val = vec3(1.0, 1.0, 1.0);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFMaterial1\n\tif(mat == _LAVALAMP_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1){\n\t\tcol *= v_POLY_constant1_val;\n\t\tvec3 r = normalize(reflect(rayDir, n));\n\t\t// http://www.pocketgl.com/reflections/\n\t\tvec2 uv = vec2( atan( -r.z, -r.x ) * RECIPROCAL_PI2 + 0.5, r.y * 0.5 + 0.5 );\n\t\tfloat fresnel = pow(1.-dot(normalize(cameraPosition), n), 2.6);\n\t\tfloat fresnelFactor = (1.-1.0) + 1.0*fresnel;\n\t\tvec3 env = texture2D(v_POLY_texture_envTexture1, uv).rgb * vec3(1.0, 1.0, 1.0) * 1.0 * fresnelFactor;\n\t\tcol += env;\n\t}\n\n\n\n\t\n\treturn col;\n}\n\n\nvec4 applyShading(vec3 rayOrigin, vec3 rayDir, SDFContext sdfContext){\n\tvec3 p = rayOrigin + rayDir * sdfContext.d;\n\tvec3 n = GetNormal(p);\n\tvec3 diffuse = GetLight(p, n);\n\n\tvec3 col = applyMaterial(p, n, rayDir, diffuse, sdfContext.matId);\n\t\t\n\t// gamma\n\tcol = pow( col, vec3(0.4545) ); \n\treturn vec4(col, 1.);\n}\n\nvoid main()\t{\n\n\tvec3 rayDir = normalize(vPw - cameraPosition);\n\tvec3 rayOrigin = cameraPosition;\n\n\tSDFContext sdfContext = RayMarch(rayOrigin, rayDir);\n\n\tgl_FragColor = sdfContext.d<MAX_DIST ? applyShading(rayOrigin, rayDir, sdfContext) : vec4(.0,.0,.0,.0);\n\n}",
+			"lights": true
+		},
+		"onBeforeCompileDataJSON": {
+			"vertexShader": "precision highp float;\nprecision highp int;\n\nvarying vec3 vPw;\n\n#include <common>\n\n\n\n// /lavalamp/MAT/rayMarchingBuilder1/globals2\nuniform float time;\n\n\n\n\n\nvoid main()\t{\n\n\tvPw = (modelMatrix * vec4( position, 1.0 )).xyz;\n\tgl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\n\n}",
+			"fragmentShader": "precision highp float;\nprecision highp int;\n\n// --- applyMaterial constants definition\nuniform int MAX_STEPS;\nuniform float MAX_DIST;\nuniform float SURF_DIST;\n#define ZERO 0\n\n#include <common>\n\n\n\n// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere4\n// https://iquilezles.org/articles/distfunctions/\n\nfloat dot2( in vec2 v ) { return dot(v,v); }\nfloat dot2( in vec3 v ) { return dot(v,v); }\nfloat ndot( in vec2 a, in vec2 b ) { return a.x*b.x - a.y*b.y; }\n/*\n*\n* SDF PRIMITIVES\n*\n*/\nfloat sdSphere( vec3 p, float s )\n{\n\treturn length(p)-s;\n}\n\nfloat sdBox( vec3 p, vec3 b )\n{\n\tvec3 q = abs(p) - b;\n\treturn length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0);\n}\n\nfloat sdRoundBox( vec3 p, vec3 b, float r )\n{\n\tvec3 q = abs(p) - b;\n\treturn length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0) - r;\n}\n\nfloat sdBoxFrame( vec3 p, vec3 b, float e )\n{\n\t\tp = abs(p  )-b;\n\tvec3 q = abs(p+e)-e;\n\treturn min(min(\n\t\tlength(max(vec3(p.x,q.y,q.z),0.0))+min(max(p.x,max(q.y,q.z)),0.0),\n\t\tlength(max(vec3(q.x,p.y,q.z),0.0))+min(max(q.x,max(p.y,q.z)),0.0)),\n\t\tlength(max(vec3(q.x,q.y,p.z),0.0))+min(max(q.x,max(q.y,p.z)),0.0));\n}\n\nfloat sdPlane( vec3 p, vec3 n, float h )\n{\n\t// n must be normalized\n\treturn dot(p,n) + h;\n}\n\nfloat sdTorus( vec3 p, vec2 t )\n{\n\tvec2 q = vec2(length(p.xz)-t.x,p.y);\n\treturn length(q)-t.y;\n}\nfloat sdCappedTorus(in vec3 p, in vec2 sc, in float ra, in float rb)\n{\n\tp.x = abs(p.x);\n\tfloat k = (sc.y*p.x>sc.x*p.y) ? dot(p.xy,sc) : length(p.xy);\n\treturn sqrt( dot(p,p) + ra*ra - 2.0*ra*k ) - rb;\n}\nfloat sdLink( vec3 p, float le, float r1, float r2 )\n{\n  vec3 q = vec3( p.x, max(abs(p.y)-le,0.0), p.z );\n  return length(vec2(length(q.xy)-r1,q.z)) - r2;\n}\nfloat sdRhombus(vec3 p, float la, float lb, float h, float ra)\n{\n  p = abs(p);\n  vec2 b = vec2(la,lb);\n  float f = clamp( (ndot(b,b-2.0*p.xz))/dot(b,b), -1.0, 1.0 );\n  vec2 q = vec2(length(p.xz-0.5*b*vec2(1.0-f,1.0+f))*sign(p.x*b.y+p.z*b.x-b.x*b.y)-ra, p.y-h);\n  return min(max(q.x,q.y),0.0) + length(max(q,0.0));\n}\nfloat sdOctahedron( vec3 p, float s)\n{\n  p = abs(p);\n  float m = p.x+p.y+p.z-s;\n  vec3 q;\n       if( 3.0*p.x < m ) q = p.xyz;\n  else if( 3.0*p.y < m ) q = p.yzx;\n  else if( 3.0*p.z < m ) q = p.zxy;\n  else return m*0.57735027;\n    \n  float k = clamp(0.5*(q.z-q.y+s),0.0,s); \n  return length(vec3(q.x,q.y-s+k,q.z-k)); \n}\n\n/*\n*\n* SDF OPERATIONS\n*\n*/\nfloat SDFUnion( float d1, float d2 ) { return min(d1,d2); }\nfloat SDFSubtract( float d1, float d2 ) { return max(-d1,d2); }\nfloat SDFIntersect( float d1, float d2 ) { return max(d1,d2); }\n\nfloat SDFSmoothUnion( float d1, float d2, float k ) {\n\tfloat h = clamp( 0.5 + 0.5*(d2-d1)/k, 0.0, 1.0 );\n\treturn mix( d2, d1, h ) - k*h*(1.0-h);\n}\n\nfloat SDFSmoothSubtract( float d1, float d2, float k ) {\n\tfloat h = clamp( 0.5 - 0.5*(d2+d1)/k, 0.0, 1.0 );\n\treturn mix( d2, -d1, h ) + k*h*(1.0-h);\n}\n\nfloat SDFSmoothIntersect( float d1, float d2, float k ) {\n\tfloat h = clamp( 0.5 - 0.5*(d2-d1)/k, 0.0, 1.0 );\n\treturn mix( d2, d1, h ) + k*h*(1.0-h);\n}\n\n// /lavalamp/MAT/rayMarchingBuilder1/SDFMaterial1\nconst int _LAVALAMP_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1 = 178;\n\n\n\n\n\n\n\n// /lavalamp/MAT/rayMarchingBuilder1/globals2\nuniform float time;\n\n// /lavalamp/MAT/rayMarchingBuilder1/param1\nuniform vec3 v_POLY_param_pos1;\n\n// /lavalamp/MAT/rayMarchingBuilder1/param2\nuniform vec3 v_POLY_param_pos2;\n\n// /lavalamp/MAT/rayMarchingBuilder1/param3\nuniform vec3 v_POLY_param_pos3;\n\n// /lavalamp/MAT/rayMarchingBuilder1/SDFMaterial1\nuniform sampler2D v_POLY_texture_envTexture1;\n\n\n\n\n#include <lightmap_pars_fragment>\n#include <bsdfs>\n#include <lights_pars_begin>\n#include <lights_physical_pars_fragment>\n\n\n\n// uniform vec3 u_BoundingBoxMin;\n// uniform vec3 u_BoundingBoxMax;\n\n\nvarying vec3 vPw;\n\n#if NUM_SPOT_LIGHTS > 0\n\tstruct SpotLightRayMarching {\n\t\tvec3 worldPos;\n\t};\n\tuniform SpotLightRayMarching spotLightsRayMarching[ NUM_SPOT_LIGHTS ];\n#endif\n\nstruct SDFContext {\n\tfloat d;\n\tint matId;\n};\n\nSDFContext DefaultSDFContext(){\n\treturn SDFContext( 0.0, 0 );\n}\nint DefaultSDFMaterial(){\n\treturn 0;\n}\n\n\n\nSDFContext GetDist(vec3 p) {\n\tSDFContext sdfContext = SDFContext(0.0, 0);\n\n\t// start GetDist builder body code\n\n\n\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals2\n\tvec3 v_POLY_globals2_position = p;\n\tfloat v_POLY_globals2_time = time;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals1\n\tvec3 v_POLY_globals1_position = p;\n\tfloat v_POLY_globals1_time = time;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals3\n\tvec3 v_POLY_globals3_position = p;\n\tfloat v_POLY_globals3_time = time;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals4\n\tvec3 v_POLY_globals4_position = p;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/param1\n\tvec3 v_POLY_param1_val = v_POLY_param_pos1;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals5\n\tvec3 v_POLY_globals5_position = p;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/param2\n\tvec3 v_POLY_param2_val = v_POLY_param_pos2;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/globals6\n\tvec3 v_POLY_globals6_position = p;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/param3\n\tvec3 v_POLY_param3_val = v_POLY_param_pos3;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd5\n\tfloat v_POLY_multAdd5_val = (0.37*(v_POLY_globals2_time + -3.5)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd3\n\tfloat v_POLY_multAdd3_val = (0.6*(v_POLY_globals2_time + 1.6)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd7\n\tfloat v_POLY_multAdd7_val = (0.16*(v_POLY_globals2_time + 0.5)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd9\n\tfloat v_POLY_multAdd9_val = (0.88*(v_POLY_globals1_time + 4.6)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd1\n\tfloat v_POLY_multAdd1_val = (1.0*(v_POLY_globals1_time + -1.7)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd13\n\tfloat v_POLY_multAdd13_val = (0.64*(v_POLY_globals3_time + 0.31)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd11\n\tfloat v_POLY_multAdd11_val = (0.2*(v_POLY_globals3_time + -13.700000000000001)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd15\n\tfloat v_POLY_multAdd15_val = (1.3*(v_POLY_globals3_time + -1.7)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere4\n\tfloat v_POLY_SDFSphere4_float = sdSphere(v_POLY_globals4_position - v_POLY_param1_val, 0.36);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere5\n\tfloat v_POLY_SDFSphere5_float = sdSphere(v_POLY_globals5_position - v_POLY_param2_val, 0.2);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere6\n\tfloat v_POLY_SDFSphere6_float = sdSphere(v_POLY_globals6_position - v_POLY_param3_val, 0.2);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin3\n\tfloat v_POLY_sin3_val = sin(v_POLY_multAdd5_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin2\n\tfloat v_POLY_sin2_val = sin(v_POLY_multAdd3_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin4\n\tfloat v_POLY_sin4_val = sin(v_POLY_multAdd7_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin5\n\tfloat v_POLY_sin5_val = sin(v_POLY_multAdd9_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin1\n\tfloat v_POLY_sin1_val = sin(v_POLY_multAdd1_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin7\n\tfloat v_POLY_sin7_val = sin(v_POLY_multAdd13_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin6\n\tfloat v_POLY_sin6_val = sin(v_POLY_multAdd11_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/sin8\n\tfloat v_POLY_sin8_val = sin(v_POLY_multAdd15_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd6\n\tfloat v_POLY_multAdd6_val = (0.35*(v_POLY_sin3_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd4\n\tfloat v_POLY_multAdd4_val = (1.0*(v_POLY_sin2_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd8\n\tfloat v_POLY_multAdd8_val = (1.2*(v_POLY_sin4_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd10\n\tfloat v_POLY_multAdd10_val = (0.31*(v_POLY_sin5_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd2\n\tfloat v_POLY_multAdd2_val = (1.0*(v_POLY_sin1_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd14\n\tfloat v_POLY_multAdd14_val = (0.31*(v_POLY_sin7_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd12\n\tfloat v_POLY_multAdd12_val = (1.0*(v_POLY_sin6_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/multAdd16\n\tfloat v_POLY_multAdd16_val = (0.53*(v_POLY_sin8_val + 0.0)) + 0.0;\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/floatToVec3_2\n\tvec3 v_POLY_floatToVec3_2_vec3 = vec3(v_POLY_multAdd6_val, v_POLY_multAdd4_val, v_POLY_multAdd8_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/floatToVec3_1\n\tvec3 v_POLY_floatToVec3_1_vec3 = vec3(v_POLY_multAdd10_val, v_POLY_multAdd2_val, 0.0);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/floatToVec3_3\n\tvec3 v_POLY_floatToVec3_3_vec3 = vec3(v_POLY_multAdd14_val, v_POLY_multAdd12_val, v_POLY_multAdd16_val);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere1\n\tfloat v_POLY_SDFSphere1_float = sdSphere(v_POLY_globals2_position - v_POLY_floatToVec3_2_vec3, 0.46);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere2\n\tfloat v_POLY_SDFSphere2_float = sdSphere(v_POLY_globals1_position - v_POLY_floatToVec3_1_vec3, 0.36);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFSphere3\n\tfloat v_POLY_SDFSphere3_float = sdSphere(v_POLY_globals3_position - v_POLY_floatToVec3_3_vec3, 0.36);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion1\n\tfloat v_POLY_SDFUnion1_union = true ? SDFSmoothUnion(v_POLY_SDFSphere1_float, v_POLY_SDFSphere2_float, 0.3) : SDFUnion(v_POLY_SDFSphere1_float, v_POLY_SDFSphere2_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion2\n\tfloat v_POLY_SDFUnion2_union = true ? SDFSmoothUnion(v_POLY_SDFUnion1_union, v_POLY_SDFSphere3_float, 0.25) : SDFUnion(v_POLY_SDFUnion1_union, v_POLY_SDFSphere3_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion3\n\tfloat v_POLY_SDFUnion3_union = true ? SDFSmoothUnion(v_POLY_SDFUnion2_union, v_POLY_SDFSphere4_float, 0.28) : SDFUnion(v_POLY_SDFUnion2_union, v_POLY_SDFSphere4_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion4\n\tfloat v_POLY_SDFUnion4_union = true ? SDFSmoothUnion(v_POLY_SDFUnion3_union, v_POLY_SDFSphere5_float, 0.28) : SDFUnion(v_POLY_SDFUnion3_union, v_POLY_SDFSphere5_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFUnion5\n\tfloat v_POLY_SDFUnion5_union = true ? SDFSmoothUnion(v_POLY_SDFUnion4_union, v_POLY_SDFSphere6_float, 0.28) : SDFUnion(v_POLY_SDFUnion4_union, v_POLY_SDFSphere6_float);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFContext1\n\tSDFContext v_POLY_SDFContext1_SDFContext = SDFContext(v_POLY_SDFUnion5_union, _LAVALAMP_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/output1\n\tsdfContext = v_POLY_SDFContext1_SDFContext;\n\n\n\n\t\n\n\treturn sdfContext;\n}\n\nSDFContext RayMarch(vec3 ro, vec3 rd) {\n\tSDFContext dO = SDFContext(0.,0);\n\n\tfor(int i=0; i<MAX_STEPS; i++) {\n\t\tvec3 p = ro + rd*dO.d;\n\t\tSDFContext sdfContext = GetDist(p);\n\t\tdO.d += sdfContext.d;\n\t\tdO.matId = sdfContext.matId;\n\t\tif(dO.d>MAX_DIST || sdfContext.d<SURF_DIST) break;\n\t}\n\n\treturn dO;\n}\n\nvec3 GetNormal(vec3 p) {\n\tSDFContext sdfContext = GetDist(p);\n\tvec2 e = vec2(.01, 0);\n\n\tvec3 n = sdfContext.d - vec3(\n\t\tGetDist(p-e.xyy).d,\n\t\tGetDist(p-e.yxy).d,\n\t\tGetDist(p-e.yyx).d);\n\n\treturn normalize(n);\n}\n\nvec3 GetLight(vec3 p, vec3 n) {\n\t#if NUM_SPOT_LIGHTS > 0\n\t\tvec3 dif = vec3(0.,0.,0.);\n\t\tSpotLightRayMarching spotLightRayMarching;\n\t\tSpotLight spotLight;\n\t\tvec3 lightPos,lightCol, l;\n\t\tfloat lighDif;\n\t\tSDFContext sdfContext;\n\t\t#pragma unroll_loop_start\n\t\tfor ( int i = 0; i < NUM_SPOT_LIGHTS; i ++ ) {\n\t\t\tspotLightRayMarching = spotLightsRayMarching[ i ];\n\t\t\tspotLight = spotLights[ i ];\n\t\t\tlightPos = spotLightRayMarching.worldPos;\n\t\t\tlightCol = spotLight.color;\n\t\t\tl = normalize(lightPos-p);\n\t\t\tlighDif = clamp(dot(n, l), 0., 1.);\n\t\t\tsdfContext = RayMarch(p+n*SURF_DIST*2., l);\n\t\t\tif(sdfContext.d<length(lightPos-p)) lighDif *= .1;\n\n\t\t\tdif += lightCol * lighDif;\n\t\t}\n\t\t#pragma unroll_loop_end\n\t\treturn dif;\n\t#else\n\t\treturn vec3(1.0, 1.0, 1.0);\n\t#endif\n}\n\n// https://iquilezles.org/articles/rmshadows\nfloat calcSoftshadow( in vec3 ro, in vec3 rd, float mint, float maxt, float k )\n{\n\tfloat res = 1.0;\n\tfloat ph = 1e20;\n\tfor( float t=mint; t<maxt; )\n\t{\n\t\tfloat h = GetDist(ro + rd*t).d;\n\t\tif( h<0.001 )\n\t\t\treturn 0.0;\n\t\tfloat y = h*h/(2.0*ph);\n\t\tfloat d = sqrt(h*h-y*y);\n\t\tres = min( res, k*d/max(0.0,t-y) );\n\t\tph = h;\n\t\tt += h;\n\t}\n\treturn res;\n}\n\n\nvec3 applyMaterial(vec3 p, vec3 n, vec3 rayDir, vec3 col, int mat){\n\n\t// start applyMaterial builder body code\n\n\n\n\t// /lavalamp/MAT/rayMarchingBuilder1/constant1\n\tvec3 v_POLY_constant1_val = vec3(1.0, 1.0, 1.0);\n\t\n\t// /lavalamp/MAT/rayMarchingBuilder1/SDFMaterial1\n\tif(mat == _LAVALAMP_MAT_RAYMARCHINGBUILDER1_SDFMATERIAL1){\n\t\tcol *= v_POLY_constant1_val;\n\t\tvec3 r = normalize(reflect(rayDir, n));\n\t\t// http://www.pocketgl.com/reflections/\n\t\tvec2 uv = vec2( atan( -r.z, -r.x ) * RECIPROCAL_PI2 + 0.5, r.y * 0.5 + 0.5 );\n\t\tfloat fresnel = pow(1.-dot(normalize(cameraPosition), n), 2.6);\n\t\tfloat fresnelFactor = (1.-1.0) + 1.0*fresnel;\n\t\tvec3 env = texture2D(v_POLY_texture_envTexture1, uv).rgb * vec3(1.0, 1.0, 1.0) * 1.0 * fresnelFactor;\n\t\tcol += env;\n\t}\n\n\n\n\t\n\treturn col;\n}\n\n\nvec4 applyShading(vec3 rayOrigin, vec3 rayDir, SDFContext sdfContext){\n\tvec3 p = rayOrigin + rayDir * sdfContext.d;\n\tvec3 n = GetNormal(p);\n\tvec3 diffuse = GetLight(p, n);\n\n\tvec3 col = applyMaterial(p, n, rayDir, diffuse, sdfContext.matId);\n\t\t\n\t// gamma\n\tcol = pow( col, vec3(0.4545) ); \n\treturn vec4(col, 1.);\n}\n\nvoid main()\t{\n\n\tvec3 rayDir = normalize(vPw - cameraPosition);\n\tvec3 rayOrigin = cameraPosition;\n\n\tSDFContext sdfContext = RayMarch(rayOrigin, rayDir);\n\n\tgl_FragColor = sdfContext.d<MAX_DIST ? applyShading(rayOrigin, rayDir, sdfContext) : vec4(.0,.0,.0,.0);\n\n}",
+			"timeDependent": true,
+			"resolutionDependent": false,
+			"paramConfigs": [
+				{
+					"type": "node_path",
+					"name": "envTexture1",
+					"defaultValue": "",
+					"uniformName": "v_POLY_texture_envTexture1"
+				},
+				{
+					"type": "vector3",
+					"name": "pos1",
+					"defaultValue": [
+						0,
+						0,
+						0
+					],
+					"uniformName": "v_POLY_param_pos1"
+				},
+				{
+					"type": "vector3",
+					"name": "pos2",
+					"defaultValue": [
+						0,
+						0,
+						0
+					],
+					"uniformName": "v_POLY_param_pos2"
+				},
+				{
+					"type": "vector3",
+					"name": "pos3",
+					"defaultValue": [
+						0,
+						0,
+						0
+					],
+					"uniformName": "v_POLY_param_pos3"
+				}
+			]
+		},
+		"customMaterials": {}
+	}
+}

@@ -1,10 +1,19 @@
 {
 	"type": "geo",
 	"nodes": {
-		"sphere1": {
-			"type": "sphere",
-			"flags": {
-				"display": true
+		"material3": {
+			"type": "material",
+			"params": {
+				"material": "../MAT/rayMarchingBuilder1"
+			},
+			"inputs": [
+				"box1"
+			]
+		},
+		"box1": {
+			"type": "box",
+			"params": {
+				"size": 4
 			}
 		}
 	},

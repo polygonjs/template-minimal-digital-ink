@@ -207,7 +207,8 @@ export default defineComponent({
     });
     const containerStyleObject = computed(() => {
       return {
-        background: `url('${posterUrl.value}') no-repeat center center`,
+        // background: `url('${posterUrl.value}') repeat cover cover`,
+        backgroundImage: `url('${posterUrl.value}')`,
       };
     });
 
@@ -263,10 +264,6 @@ progress bar
 .polygonjs-loader-fadeable {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -ms-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
 }
 
 /*
@@ -279,9 +276,8 @@ poster
   width: 100%;
   height: 100%;
   pointer-events: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   z-index: 10;
 }
