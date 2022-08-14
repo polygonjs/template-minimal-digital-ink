@@ -1,7 +1,7 @@
 import { Poly } from "@polygonjs/polygonjs/dist/src/engine/Poly";
 import { SceneJsonExporterData } from "@polygonjs/polygonjs/dist/src/engine/io/json/export/Scene";
 import { OnProgressCallback } from "./loadSceneData";
-import { PolySceneWithNodeMap_lavalamp_01 } from "./PolySceneWithNodeMap";
+import { PolySceneWithNodeMap_scene_01 } from "./PolySceneWithNodeMap";
 import { BaseViewerType } from "@polygonjs/polygonjs/dist/src/engine/viewers/_Base";
 import { WebGLRenderer } from "three";
 
@@ -19,13 +19,13 @@ export interface loadSceneOptions {
   cameraMaskOverride?: string;
 }
 interface LoadedData {
-  scene: PolySceneWithNodeMap_lavalamp_01;
+  scene: PolySceneWithNodeMap_scene_01;
   viewer: BaseViewerType | undefined;
 }
 export type LoadSceneMethod = (
   options: loadSceneOptions
 ) => Promise<LoadedData | undefined>;
 
-declare const loadSceneFromSceneData_lavalamp_01: LoadSceneMethod;
+declare const loadSceneFromSceneData_scene_01: LoadSceneMethod;
 
-export { Poly, loadSceneFromSceneData_lavalamp_01 };
+export { Poly, loadSceneFromSceneData_scene_01 };

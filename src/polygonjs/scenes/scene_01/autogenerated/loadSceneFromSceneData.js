@@ -3,9 +3,9 @@ import { PolyNodeController } from "@polygonjs/polygonjs/dist/src/engine/nodes/u
 import { configureScene, configurePolygonjs } from "../PolyConfig";
 import { Poly } from "@polygonjs/polygonjs/dist/src/engine/Poly";
 import { AllExpressionsRegister } from "@polygonjs/polygonjs/dist/src/engine/poly/registers/expressions/All";
-import { requiredImports_lavalamp_01 } from "./requiredImports";
+import { requiredImports_scene_01 } from "./requiredImports";
 
-const loadSceneFromSceneData_lavalamp_01 = async function (options) {
+const loadSceneFromSceneData_scene_01 = async function (options) {
   const {
     domElement,
     sceneData,
@@ -22,10 +22,10 @@ const loadSceneFromSceneData_lavalamp_01 = async function (options) {
 
   if (runRegister) {
     // registers nodes required for this scene
-    for (const node of requiredImports_lavalamp_01.nodes) {
+    for (const node of requiredImports_scene_01.nodes) {
       Poly.registerNode(node, undefined, { printWarnings });
     }
-    for (const operation of requiredImports_lavalamp_01.operations) {
+    for (const operation of requiredImports_scene_01.operations) {
       Poly.registerOperation(operation, { printWarnings });
     }
     const polyNodesData = [];
@@ -49,7 +49,7 @@ const loadSceneFromSceneData_lavalamp_01 = async function (options) {
   }
 
   // load the scene and create a viewer
-  const sceneName = "lavalamp_01";
+  const sceneName = "scene_01";
   const { scene, viewer } = await ScenePlayerImporter.loadSceneData({
     domElement,
     sceneName,
@@ -67,4 +67,4 @@ const loadSceneFromSceneData_lavalamp_01 = async function (options) {
   };
 };
 
-export { Poly, loadSceneFromSceneData_lavalamp_01 };
+export { Poly, loadSceneFromSceneData_scene_01 };

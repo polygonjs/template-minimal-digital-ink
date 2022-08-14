@@ -7,8 +7,8 @@ interface LoadManifestOptions {
   sceneDataRoot?: string;
 }
 
-type LoadSceneData_lavalamp_01 = (
+type LoadSceneData_scene_01 = (
   options?: LoadManifestOptions
 ) => Promise<SceneJsonExporterData>;
 
-export const loadSceneData_lavalamp_01: LoadSceneData_lavalamp_01;
+export const loadSceneData_scene_01: LoadSceneData_scene_01;

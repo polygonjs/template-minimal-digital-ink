@@ -24,7 +24,7 @@ import { PerspectiveCameraSopNode } from "@polygonjs/polygonjs/dist/src/engine/n
 import { PolarTransformSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/PolarTransform";
 import { SpotLightSopNode } from "@polygonjs/polygonjs/dist/src/engine/nodes/sop/SpotLight";
 
-export const requiredImports_lavalamp_01 = {
+export const requiredImports_scene_01 = {
   nodes: [
     OnTickActorNode,
     PlaneActorNode,

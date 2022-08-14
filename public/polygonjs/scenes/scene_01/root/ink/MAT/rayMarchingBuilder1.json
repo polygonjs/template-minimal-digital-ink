@@ -2338,7 +2338,7 @@
 				"type": "Material",
 				"generator": "Material.toJSON"
 			},
-			"uuid": "/lavalamp/MAT/rayMarchingBuilder1-main",
+			"uuid": "/ink/MAT/rayMarchingBuilder1-main",
 			"type": "ShaderMaterial",
 			"name": "/lavalamp/MAT/rayMarchingBuilder1",
 			"color": 16777215,

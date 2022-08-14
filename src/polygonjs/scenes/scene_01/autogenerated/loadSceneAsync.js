@@ -1,6 +1,6 @@
-import { loadSceneData_lavalamp_01 } from "./loadSceneData.js";
+import { loadSceneData_scene_01 } from "./loadSceneData.js";
 
-export const loadSceneAsync_lavalamp_01 = async function (options = {}) {
+export const loadSceneAsync_scene_01 = async function (options = {}) {
   const {
     onProgress,
     domElement,
@@ -21,10 +21,10 @@ export const loadSceneAsync_lavalamp_01 = async function (options = {}) {
   const moduleNames = loadModules ? [] : [];
   const promises = [
     import("./loadSceneFromSceneData.js"),
-    loadSceneData_lavalamp_01({ onProgress, sceneDataRoot }),
+    loadSceneData_scene_01({ onProgress, sceneDataRoot }),
   ];
   const results = await Promise.all(promises);
-  const { Poly, loadSceneFromSceneData_lavalamp_01 } = results[0];
+  const { Poly, loadSceneFromSceneData_scene_01 } = results[0];
   const sceneData = results[1];
   if (configureSceneData) {
     configureSceneData(sceneData);
@@ -42,7 +42,7 @@ export const loadSceneAsync_lavalamp_01 = async function (options = {}) {
     i++;
   }
 
-  const loadedData = await loadSceneFromSceneData_lavalamp_01({
+  const loadedData = await loadSceneFromSceneData_scene_01({
     onProgress,
     sceneData,
     domElement,

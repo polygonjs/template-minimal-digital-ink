@@ -6,7 +6,7 @@ import {
 
 export const configureEditor: ConfigureEditor = (options: EditorApiOptions) => {
   // configure the editor
-  options.api.setProjectName("template-minimal-lavalamp");
+  options.api.setProjectName("template-minimal-digital-ink");
   options.api.html.head.setTitle(options.sceneName);
   options.api.html.head.setDescription(
     "a WebGL experience created with @polygonjs"

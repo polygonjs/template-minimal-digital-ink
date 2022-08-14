@@ -1,6 +1,66 @@
 {
 	"nodes": {
-		"lavalamp": {
+		"cameras": {
+			"pos": [
+				-50,
+				50
+			],
+			"nodes": {
+				"perspectiveCamera_MAIN": {
+					"pos": [
+						-150,
+						-200
+					]
+				},
+				"perspectiveCamera_DEBUG": {
+					"pos": [
+						-550,
+						-200
+					]
+				},
+				"merge1": {
+					"pos": [
+						-400,
+						150
+					]
+				},
+				"cameraControls1": {
+					"pos": [
+						-550,
+						-50
+					],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [
+								0,
+								0
+							]
+						}
+					}
+				}
+			}
+		},
+		"lights": {
+			"pos": [
+				-50,
+				150
+			],
+			"nodes": {
+				"spotLight1": {
+					"pos": [
+						-200,
+						-100
+					]
+				},
+				"polarTransform1": {
+					"pos": [
+						-200,
+						100
+					]
+				}
+			}
+		},
+		"ink": {
 			"pos": [
 				-50,
 				-50
@@ -403,66 +463,6 @@
 							]
 						}
 					}
-				}
-			}
-		},
-		"cameras": {
-			"pos": [
-				-50,
-				50
-			],
-			"nodes": {
-				"perspectiveCamera_MAIN": {
-					"pos": [
-						-150,
-						-200
-					]
-				},
-				"perspectiveCamera_DEBUG": {
-					"pos": [
-						-550,
-						-200
-					]
-				},
-				"merge1": {
-					"pos": [
-						-400,
-						150
-					]
-				},
-				"cameraControls1": {
-					"pos": [
-						-550,
-						-50
-					],
-					"nodes": {
-						"cameraOrbitControls1": {
-							"pos": [
-								0,
-								0
-							]
-						}
-					}
-				}
-			}
-		},
-		"lights": {
-			"pos": [
-				-50,
-				150
-			],
-			"nodes": {
-				"spotLight1": {
-					"pos": [
-						-200,
-						-100
-					]
-				},
-				"polarTransform1": {
-					"pos": [
-						-200,
-						100
-					]
 				}
 			}
 		}
