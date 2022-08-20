@@ -5,6 +5,7 @@
     :autoPlay="true"
     :displayLoadingProgressBar="true"
     :posterExtension="'webp'"
+    publicPath=""
   />
 </template>
 

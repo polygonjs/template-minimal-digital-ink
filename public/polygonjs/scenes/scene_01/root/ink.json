@@ -13,7 +13,7 @@
 		"box1": {
 			"type": "box",
 			"params": {
-				"size": 4
+				"size": 8
 			}
 		}
 	},

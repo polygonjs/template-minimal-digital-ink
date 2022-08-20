@@ -1,3 +1,8 @@
+![Painted Globe Website Template](https://github.com/polygonjs/template-minimal-digital-ink/blob/main/public/screenshots/screenshot1.jpg?raw=true)
+![Screenshot from Polygonjs](https://github.com/polygonjs/template-minimal-digital-ink/blob/main/public/screenshots/screenshot2.jpg?raw=true)
+
+[Live Demo](https://market.polygonjs.com/gui/templates/digital-ink)
+
 # template-minimal-digital-ink
 
 This project was created using:

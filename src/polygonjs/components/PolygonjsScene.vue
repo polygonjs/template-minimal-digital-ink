@@ -102,6 +102,11 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
+    publicPath: {
+      type: String,
+      default: "/",
+      required: false,
+    },
   },
   setup(props, context) {
     const sceneContainer: Ref<HTMLElement | null> = ref(null);
@@ -143,9 +148,9 @@ export default defineComponent({
         cameraMaskOverride: props.cameraMaskOverride,
         autoPlay: props.autoPlay,
         configureSceneData,
-        sceneDataRoot: `/polygonjs/scenes`,
-        // assetsRoot: process.env.BASE_URL,
-        // libsRootPrefix: process.env.BASE_URL,
+        sceneDataRoot: `${props.publicPath}polygonjs/scenes`,
+        assetsRoot: props.publicPath,
+        libsRootPrefix: props.publicPath,
       });
       scene = loadedData.scene;
       viewer = loadedData.viewer;
@@ -202,7 +207,7 @@ export default defineComponent({
     const posterUrl = computed(() => {
       return (
         props.posterUrl ||
-        `/polygonjs/screenshots/scenes/${props.sceneName}/poster.${props.posterExtension}`
+        `${props.publicPath}polygonjs/screenshots/scenes/${props.sceneName}/poster.${props.posterExtension}`
       );
     });
     const containerStyleObject = computed(() => {

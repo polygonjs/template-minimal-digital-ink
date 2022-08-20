@@ -35,10 +35,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": -168.73046725010985,
-						"y": -1079.054544409761
+						"x": 367.39000596449586,
+						"y": -559.2791946119821
 					},
-					"zoom": 0.6920201636420359
+					"zoom": 0.6809090576171877
 				},
 				"history": {
 					"2": {
@@ -209,7 +209,7 @@
 		"split_mode": "horizontal"
 	},
 	"currentNodes": [
-		"/ink/MAT/rayMarchingBuilder1",
+		"/ink",
 		"/",
 		"/",
 		"/",
@@ -221,8 +221,6 @@
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
 				"/ink",
 				"/",
 				"/ink",
@@ -320,7 +318,9 @@
 				"/ink/ANIM",
 				"/ink",
 				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1"
+				"/ink/MAT/rayMarchingBuilder1",
+				"/ink/MAT",
+				"/ink"
 			],
 			"2": [],
 			"3": [],
