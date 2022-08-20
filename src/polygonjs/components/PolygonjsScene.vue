@@ -27,7 +27,7 @@ import {
   ref,
   computed,
 } from "vue";
-import { PolyEventName } from "@polygonjs/polygonjs/dist/src/engine/io/common/EventsDispatcher";
+import { PolyEventName } from "@polygonjs/polygonjs/dist/src/engine/poly/utils/PolyEventName";
 import { PolyScene } from "@polygonjs/polygonjs/dist/src/engine/scene/PolyScene";
 import { BaseViewerType } from "@polygonjs/polygonjs/dist/src/engine/viewers/_Base";
 import { SceneJsonExporterData } from "@polygonjs/polygonjs/dist/src/engine/io/json/export/Scene";

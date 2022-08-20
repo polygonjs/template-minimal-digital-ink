@@ -71,7 +71,6 @@
 			"params": {
 				"name": "pos1",
 				"type": 3,
-				"lerp": 0.21,
 				"Vector3": {
 					"type": "vector3",
 					"default_value": [
@@ -83,9 +82,18 @@
 						"spare": true,
 						"editable": false
 					}
+				},
+				"lerp": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.21
 				}
 			},
-			"maxInputsCount": 3,
+			"maxInputsCount": 4,
 			"inputs": [
 				{
 					"index": 0,
@@ -114,6 +122,11 @@
 					{
 						"name": "Vector3",
 						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "lerp",
+						"type": "float",
 						"isArray": false
 					}
 				],
@@ -131,7 +144,6 @@
 			"params": {
 				"name": "pos2",
 				"type": 3,
-				"lerp": 0.06,
 				"Vector3": {
 					"type": "vector3",
 					"default_value": [
@@ -143,9 +155,18 @@
 						"spare": true,
 						"editable": false
 					}
+				},
+				"lerp": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.06
 				}
 			},
-			"maxInputsCount": 3,
+			"maxInputsCount": 4,
 			"inputs": [
 				{
 					"index": 0,
@@ -174,6 +195,11 @@
 					{
 						"name": "Vector3",
 						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "lerp",
+						"type": "float",
 						"isArray": false
 					}
 				],
@@ -191,7 +217,6 @@
 			"params": {
 				"name": "pos3",
 				"type": 3,
-				"lerp": 0.01,
 				"Vector3": {
 					"type": "vector3",
 					"default_value": [
@@ -203,9 +228,18 @@
 						"spare": true,
 						"editable": false
 					}
+				},
+				"lerp": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": 0.01
 				}
 			},
-			"maxInputsCount": 3,
+			"maxInputsCount": 4,
 			"inputs": [
 				{
 					"index": 0,
@@ -234,6 +268,11 @@
 					{
 						"name": "Vector3",
 						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "lerp",
+						"type": "float",
 						"isArray": false
 					}
 				],

@@ -1,10 +1,10 @@
 <template>
   <div
-    class="h-full relative items-center justify-center w-full overflow-x-hidden"
+    class="h-full relative items-center justify-center w-full overflow-x-hidden bg-black"
   >
-    <div class="h-full items-center justify-between flex flex-col lg:flex-row">
-      <HeroText></HeroText>
+    <div class="h-full relative">
       <HeroVisuals></HeroVisuals>
+      <HeroText></HeroText>
     </div>
   </div>
 </template>

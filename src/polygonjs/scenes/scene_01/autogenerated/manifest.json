@@ -1,14 +1,16 @@
 {
-	"properties": "1660512272506",
-	"root": "1660512272506",
+	"properties": "1660954428962",
+	"root": "1660954428962",
 	"nodes": {
-		"cameras": "1660512272506",
-		"cameras/cameraControls1": "1660512272506",
-		"lights": "1660512272506",
-		"ink": "1660512272506",
-		"ink/MAT": "1660512272506",
-		"ink/MAT/rayMarchingBuilder1": "1660512272506",
-		"ink/COP": "1660512272506",
-		"ink/actor1": "1660512272506"
+		"cameras": "1660954428962",
+		"cameras/cameraControls1": "1660954428962",
+		"lights": "1660954428962",
+		"ink": "1660954428962",
+		"ink/MAT": "1660954428962",
+		"ink/MAT/rayMarchingBuilder1": "1660954428962",
+		"ink/COP": "1660954428962",
+		"ink/actor1": "1660954428962",
+		"ink/ANIM": "1660954428962",
+		"ink/eventsNetwork1": "1660954428962"
 	}
 }

@@ -1,0 +1,24 @@
+{
+	"type": "eventsNetwork",
+	"nodes": {
+		"scene1": {
+			"type": "scene"
+		},
+		"animation1": {
+			"type": "animation",
+			"params": {
+				"animation": "../../ANIM/PLAY"
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "scene1",
+					"output": "play"
+				}
+			]
+		}
+	},
+	"selection": [
+		"animation1"
+	]
+}

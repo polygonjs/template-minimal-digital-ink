@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 h-full">
+  <div class="absolute h-full inset-0">
     <Scene01></Scene01>
   </div>
 </template>
