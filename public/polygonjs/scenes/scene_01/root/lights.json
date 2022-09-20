@@ -11,9 +11,7 @@
 				"latitude": 18,
 				"depth": 8
 			},
-			"inputs": [
-				"spotLight1"
-			],
+			"inputs": ["spotLight1"],
 			"flags": {
 				"display": true
 			}

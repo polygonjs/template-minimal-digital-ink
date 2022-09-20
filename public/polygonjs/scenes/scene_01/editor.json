@@ -4,9 +4,7 @@
 		"split_panel0": {
 			"split_ratio": 0.5,
 			"split_panel0": {
-				"panelTypes": [
-					"viewer"
-				],
+				"panelTypes": ["viewer"],
 				"currentPanelIndex": 0,
 				"panel_data": {
 					"camera": "/cameras/cameras:sopGroup/perspectiveCamera_MAIN",
@@ -14,29 +12,23 @@
 				}
 			},
 			"split_panel1": {
-				"panelTypes": [
-					"params"
-				],
+				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": null,
+					"active_folder": 297,
 					"linkIndex": 1
 				}
 			},
 			"split_mode": "vertical"
 		},
 		"split_panel1": {
-			"panelTypes": [
-				"network",
-				"params",
-				"viewer"
-			],
+			"panelTypes": ["network", "params", "viewer"],
 			"currentPanelIndex": 0,
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 367.39000596449586,
-						"y": -559.2791946119821
+						"x": 524.9334618977709,
+						"y": -626.0348476615391
 					},
 					"zoom": 0.6809090576171877
 				},
@@ -64,8 +56,8 @@
 					},
 					"86": {
 						"position": {
-							"x": 367.39000596449586,
-							"y": -559.2791946119821
+							"x": 524.9334618977709,
+							"y": -626.0348476615391
 						},
 						"zoom": 0.6809090576171877
 					},
@@ -104,12 +96,19 @@
 						},
 						"zoom": 0.756565619574653
 					},
+					"269": {
+						"position": {
+							"x": 400,
+							"y": -50
+						},
+						"zoom": 0.6809090576171877
+					},
 					"272": {
 						"position": {
-							"x": 84.9645889481873,
-							"y": -206.48432976448925
+							"x": -163.19147476821374,
+							"y": -330.7970643442118
 						},
-						"zoom": 0.8709089965820318
+						"zoom": 0.7845454101562505
 					},
 					"279": {
 						"position": {
@@ -120,8 +119,8 @@
 					},
 					"282": {
 						"position": {
-							"x": 49.21257936826674,
-							"y": 2.9527468323317763
+							"x": 201.0817260908732,
+							"y": 6.0680022634858615
 						},
 						"zoom": 1.1672726745605473
 					},
@@ -208,118 +207,29 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": [
-		"/ink",
-		"/",
-		"/",
-		"/",
-		"/",
-		"/",
-		"/",
-		"/"
-	],
+	"currentNodes": ["/ink", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/ink",
 				"/",
-				"/ink",
-				"/ink/MAT",
-				"/ink",
-				"/ink/COP",
-				"/ink",
-				"/",
-				"/cameras",
-				"/",
-				"/ink",
-				"/",
-				"/ink",
-				"/",
-				"/ink",
-				"/ink/COP",
-				"/ink",
-				"/ink/MAT",
-				"/ink",
-				"/",
-				"/cameras",
-				"/",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/",
-				"/lights",
-				"/",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/ink/actor1",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/ink/actor1",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/ink/actor1",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/",
-				"/cameras",
-				"/",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/ink/MAT",
 				"/ink",
 				"/ink/ANIM",
+				"/ink",
+				"/ink/MAT",
+				"/ink/MAT/rayMarchingBuilder1",
+				"/ink/MAT",
 				"/ink",
 				"/ink/eventsNetwork1",
-				"/ink/ANIM",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
-				"/ink",
-				"/ink/actor1",
-				"/ink",
-				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
 				"/ink",
 				"/",
 				"/ink",
-				"/ink/ANIM",
+				"/ink/actor1",
+				"/ink",
+				"/ink/COP",
 				"/ink",
 				"/ink/MAT",
-				"/ink/MAT/rayMarchingBuilder1",
-				"/ink/MAT",
+				"/ink",
+				"/ink/actor1",
 				"/ink"
 			],
 			"2": [],
@@ -331,7 +241,7 @@
 			"8": []
 		},
 		"index": {
-			"1": 99,
+			"1": 19,
 			"2": -1,
 			"3": -1,
 			"4": -1,

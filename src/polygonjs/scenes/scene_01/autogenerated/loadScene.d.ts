@@ -6,7 +6,8 @@ import { WebGLRenderer } from "three";
 type OnProgressCallback = (ratio: number, args: any) => void;
 type ConfigureSceneData = (sceneData: SceneJsonExporterData) => void;
 
-export interface LoadSceneAsyncOptions {
+export interface LoadSceneOptions {
+  sceneData?: SceneJsonExporterData;
   onProgress?: OnProgressCallback;
   domElement?: HTMLElement | string;
   moduleImportSuffix?: string;
@@ -26,8 +27,8 @@ export interface LoadedData {
   scene: PolySceneWithNodeMap_scene_01;
   viewer: BaseViewerType | undefined;
 }
-export type LoadSceneAsync_scene_01 = (
-  options?: LoadSceneAsyncOptions
+export type LoadScene_scene_01 = (
+  options?: LoadSceneOptions
 ) => Promise<LoadedData>;
 
-export const loadSceneAsync_scene_01: LoadSceneAsync_scene_01;
+export const loadScene_scene_01: LoadScene_scene_01;

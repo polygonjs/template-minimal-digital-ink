@@ -4,29 +4,18 @@
 		"perspectiveCamera_MAIN": {
 			"type": "perspectiveCamera",
 			"params": {
-				"position": [
-					0,
-					0,
-					4.9
-				]
+				"position": [0, 0, 4.9]
 			}
 		},
 		"perspectiveCamera_DEBUG": {
 			"type": "perspectiveCamera",
 			"params": {
-				"position": [
-					0,
-					0,
-					5
-				]
+				"position": [0, 0, 5]
 			}
 		},
 		"merge1": {
 			"type": "merge",
-			"inputs": [
-				"cameraControls1",
-				"perspectiveCamera_MAIN"
-			],
+			"inputs": ["cameraControls1", "perspectiveCamera_MAIN"],
 			"flags": {
 				"display": true
 			}

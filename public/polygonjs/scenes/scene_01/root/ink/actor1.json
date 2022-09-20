@@ -59,29 +59,29 @@
 		"plane1": {
 			"type": "plane",
 			"params": {
-				"normal": [
-					0,
-					0,
-					1
-				]
+				"normal": [0, 0, 1]
 			}
 		},
 		"setMaterialUniform1": {
 			"type": "setMaterialUniform",
 			"params": {
-				"name": "pos1",
 				"type": 3,
 				"Vector3": {
 					"type": "vector3",
-					"default_value": [
-						0,
-						0,
-						0
-					],
+					"default_value": [0, 0, 0],
 					"options": {
 						"spare": true,
 						"editable": false
 					}
+				},
+				"uniformName": {
+					"type": "string",
+					"default_value": "",
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": "pos1"
 				},
 				"lerp": {
 					"type": "float",
@@ -93,7 +93,7 @@
 					"raw_input": 0.21
 				}
 			},
-			"maxInputsCount": 4,
+			"maxInputsCount": 5,
 			"inputs": [
 				{
 					"index": 0,
@@ -122,6 +122,11 @@
 					{
 						"name": "Vector3",
 						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "uniformName",
+						"type": "string",
 						"isArray": false
 					},
 					{
@@ -142,19 +147,23 @@
 		"setMaterialUniform2": {
 			"type": "setMaterialUniform",
 			"params": {
-				"name": "pos2",
 				"type": 3,
 				"Vector3": {
 					"type": "vector3",
-					"default_value": [
-						0,
-						0,
-						0
-					],
+					"default_value": [0, 0, 0],
 					"options": {
 						"spare": true,
 						"editable": false
 					}
+				},
+				"uniformName": {
+					"type": "string",
+					"default_value": "",
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": "pos2"
 				},
 				"lerp": {
 					"type": "float",
@@ -166,7 +175,7 @@
 					"raw_input": 0.06
 				}
 			},
-			"maxInputsCount": 4,
+			"maxInputsCount": 5,
 			"inputs": [
 				{
 					"index": 0,
@@ -195,6 +204,11 @@
 					{
 						"name": "Vector3",
 						"type": "Vector3",
+						"isArray": false
+					},
+					{
+						"name": "uniformName",
+						"type": "string",
 						"isArray": false
 					},
 					{
@@ -215,19 +229,23 @@
 		"setMaterialUniform3": {
 			"type": "setMaterialUniform",
 			"params": {
-				"name": "pos3",
 				"type": 3,
 				"Vector3": {
 					"type": "vector3",
-					"default_value": [
-						0,
-						0,
-						0
-					],
+					"default_value": [0, 0, 0],
 					"options": {
 						"spare": true,
 						"editable": false
 					}
+				},
+				"uniformName": {
+					"type": "string",
+					"default_value": "",
+					"options": {
+						"spare": true,
+						"editable": true
+					},
+					"raw_input": "pos3"
 				},
 				"lerp": {
 					"type": "float",
@@ -239,7 +257,7 @@
 					"raw_input": 0.01
 				}
 			},
-			"maxInputsCount": 4,
+			"maxInputsCount": 5,
 			"inputs": [
 				{
 					"index": 0,
@@ -271,6 +289,11 @@
 						"isArray": false
 					},
 					{
+						"name": "uniformName",
+						"type": "string",
+						"isArray": false
+					},
+					{
 						"name": "lerp",
 						"type": "float",
 						"isArray": false
@@ -286,9 +309,7 @@
 			}
 		}
 	},
-	"inputs": [
-		"material3"
-	],
+	"inputs": ["material3"],
 	"flags": {
 		"display": true
 	}

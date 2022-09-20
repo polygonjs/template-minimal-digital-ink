@@ -2,11 +2,7 @@
 	"type": "root",
 	"nodes": {},
 	"params": {
-		"bgColor": [
-			0,
-			0,
-			0
-		],
+		"bgColor": [0, 0, 0],
 		"mainCameraPath": "/cameras/cameras:sopGroup/perspectiveCamera_MAIN"
 	}
 }

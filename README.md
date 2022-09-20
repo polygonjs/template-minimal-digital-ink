@@ -1,7 +1,7 @@
 ![Digital Ink Website Template](https://raw.githubusercontent.com/polygonjs/template-minimal-digital-ink/main/public/screenshots/sceenshot1.jpg)
 ![Screenshot from Polygonjs](https://raw.githubusercontent.com/polygonjs/template-minimal-digital-ink/main/public/screenshots/sceenshot2.jpg)
 
-[Live Demo](https://market.polygonjs.com/gui/templates/digital-ink)
+[Create interactive 3D With Polygonjs](https://polygonjs.com) --- [View On Polygonjs Marketplace](https://market.polygonjs.com/gui/templates/digital-ink) --- [Live Demo](https://market.polygonjs.com/gui/templates/digital-ink/fullscreen)
 
 # template-minimal-digital-ink
 

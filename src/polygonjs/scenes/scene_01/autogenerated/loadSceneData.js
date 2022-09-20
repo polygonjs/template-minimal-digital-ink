@@ -1,6 +1,6 @@
 import { SceneDataManifestImporter } from "@polygonjs/polygonjs/dist/src/engine/io/manifest/import/SceneData";
 const manifest = {
-  properties: "1661022424938",
+  properties: "1663712858886",
   root: "1661022424938",
   nodes: {
     cameras: "1661022424938",
@@ -8,11 +8,17 @@ const manifest = {
     lights: "1661022424938",
     ink: "1661022424938",
     "ink/MAT": "1661022424938",
-    "ink/MAT/rayMarchingBuilder1": "1661022424938",
+    "ink/MAT/rayMarchingBuilder1": "1663712858886",
     "ink/COP": "1661022424938",
-    "ink/actor1": "1661022424938",
-    "ink/ANIM": "1661022424938",
-    "ink/eventsNetwork1": "1661022424938",
+    "ink/actor1": "1663712858886",
+    "ink/ANIM": "1663712858886",
+    "ink/eventsNetwork1": "1663712858886",
+  },
+  shaders: {
+    "/ink/MAT/rayMarchingBuilder1": {
+      vertex: "1663712858886",
+      fragment: "1663712858886",
+    },
   },
 };
 

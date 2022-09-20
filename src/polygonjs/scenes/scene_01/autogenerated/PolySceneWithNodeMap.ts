@@ -325,9 +325,19 @@ export interface PolySceneProps_scene_01 {
   "ink-MAT-rayMarchingBuilder1--maxSteps"?: ParamValueSerializedTypeMap["integer"];
   "ink-MAT-rayMarchingBuilder1--maxDist"?: ParamValueSerializedTypeMap["float"];
   "ink-MAT-rayMarchingBuilder1--surfDist"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--normalsBias"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--center"?: ParamValueSerializedTypeMap["vector3"];
+  "ink-MAT-rayMarchingBuilder1--center-centerx"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--center-centery"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--center-centerz"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--centerx"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--centery"?: ParamValueSerializedTypeMap["float"];
+  "ink-MAT-rayMarchingBuilder1--centerz"?: ParamValueSerializedTypeMap["float"];
   "ink-MAT-rayMarchingBuilder1--advanced"?: ParamValueSerializedTypeMap["folder"];
   "ink-MAT-rayMarchingBuilder1--setBuilderNode"?: ParamValueSerializedTypeMap["boolean"];
   "ink-MAT-rayMarchingBuilder1--builderNode"?: ParamValueSerializedTypeMap["node_path"];
+  "ink-MAT-rayMarchingBuilder1--doubleSided"?: ParamValueSerializedTypeMap["boolean"];
+  "ink-MAT-rayMarchingBuilder1--front"?: ParamValueSerializedTypeMap["boolean"];
   "ink-MAT-rayMarchingBuilder1--envTexture1"?: ParamValueSerializedTypeMap["node_path"];
   "ink-MAT-rayMarchingBuilder1--pos1"?: ParamValueSerializedTypeMap["vector3"];
   "ink-MAT-rayMarchingBuilder1--pos1-pos1x"?: ParamValueSerializedTypeMap["float"];
@@ -404,7 +414,6 @@ export interface PolySceneProps_scene_01 {
   "ink-actor1-plane1--normalz"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-plane1--constant"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform1--addPrefix"?: ParamValueSerializedTypeMap["boolean"];
-  "ink-actor1-setMaterialUniform1--name"?: ParamValueSerializedTypeMap["string"];
   "ink-actor1-setMaterialUniform1--type"?: ParamValueSerializedTypeMap["integer"];
   "ink-actor1-setMaterialUniform1--Vector3"?: ParamValueSerializedTypeMap["vector3"];
   "ink-actor1-setMaterialUniform1--Vector3-Vector3x"?: ParamValueSerializedTypeMap["float"];
@@ -413,9 +422,9 @@ export interface PolySceneProps_scene_01 {
   "ink-actor1-setMaterialUniform1--Vector3x"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform1--Vector3y"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform1--Vector3z"?: ParamValueSerializedTypeMap["float"];
+  "ink-actor1-setMaterialUniform1--uniformName"?: ParamValueSerializedTypeMap["string"];
   "ink-actor1-setMaterialUniform1--lerp"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform2--addPrefix"?: ParamValueSerializedTypeMap["boolean"];
-  "ink-actor1-setMaterialUniform2--name"?: ParamValueSerializedTypeMap["string"];
   "ink-actor1-setMaterialUniform2--type"?: ParamValueSerializedTypeMap["integer"];
   "ink-actor1-setMaterialUniform2--Vector3"?: ParamValueSerializedTypeMap["vector3"];
   "ink-actor1-setMaterialUniform2--Vector3-Vector3x"?: ParamValueSerializedTypeMap["float"];
@@ -424,9 +433,9 @@ export interface PolySceneProps_scene_01 {
   "ink-actor1-setMaterialUniform2--Vector3x"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform2--Vector3y"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform2--Vector3z"?: ParamValueSerializedTypeMap["float"];
+  "ink-actor1-setMaterialUniform2--uniformName"?: ParamValueSerializedTypeMap["string"];
   "ink-actor1-setMaterialUniform2--lerp"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform3--addPrefix"?: ParamValueSerializedTypeMap["boolean"];
-  "ink-actor1-setMaterialUniform3--name"?: ParamValueSerializedTypeMap["string"];
   "ink-actor1-setMaterialUniform3--type"?: ParamValueSerializedTypeMap["integer"];
   "ink-actor1-setMaterialUniform3--Vector3"?: ParamValueSerializedTypeMap["vector3"];
   "ink-actor1-setMaterialUniform3--Vector3-Vector3x"?: ParamValueSerializedTypeMap["float"];
@@ -435,6 +444,7 @@ export interface PolySceneProps_scene_01 {
   "ink-actor1-setMaterialUniform3--Vector3x"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform3--Vector3y"?: ParamValueSerializedTypeMap["float"];
   "ink-actor1-setMaterialUniform3--Vector3z"?: ParamValueSerializedTypeMap["float"];
+  "ink-actor1-setMaterialUniform3--uniformName"?: ParamValueSerializedTypeMap["string"];
   "ink-actor1-setMaterialUniform3--lerp"?: ParamValueSerializedTypeMap["float"];
   "ink-ANIM-duration1--duration"?: ParamValueSerializedTypeMap["float"];
   "ink-ANIM-easing1--name"?: ParamValueSerializedTypeMap["integer"];

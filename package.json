@@ -10,8 +10,9 @@
     "clean_dist": "rm -rf dist/polygonjs/backup && rm -rf dist/polygonjs/js && rm -rf dist/screenshots"
   },
   "dependencies": {
+    "@polygonjs/vue3": "^1.2.23-1",
     "core-js": "^3.8.3",
-    "polygonjs-editor": "1.2.12-1",
+    "polygonjs-editor": "1.2.23-2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

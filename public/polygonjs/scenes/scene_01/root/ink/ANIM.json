@@ -13,9 +13,7 @@
 				"name": 2,
 				"inOut": 2
 			},
-			"inputs": [
-				"duration1"
-			]
+			"inputs": ["duration1"]
 		},
 		"target1": {
 			"type": "target",
@@ -23,33 +21,23 @@
 				"type": 1,
 				"nodePath": "../../MAT/rayMarchingBuilder1"
 			},
-			"inputs": [
-				"easing1"
-			]
+			"inputs": ["easing1"]
 		},
 		"propertyName1": {
 			"type": "propertyName",
 			"params": {
 				"name": "radiusMult"
 			},
-			"inputs": [
-				"target1"
-			]
+			"inputs": ["target1"]
 		},
 		"propertyValue1": {
 			"type": "propertyValue",
 			"params": {
 				"size": 1,
 				"value1": 1,
-				"value3": [
-					0,
-					1,
-					0
-				]
+				"value3": [0, 1, 0]
 			},
-			"inputs": [
-				"propertyName1"
-			]
+			"inputs": ["propertyName1"]
 		},
 		"propertyValue2": {
 			"type": "propertyValue",
@@ -57,31 +45,19 @@
 				"size": 1,
 				"value1": -0.4
 			},
-			"inputs": [
-				"propertyName1"
-			]
+			"inputs": ["propertyName1"]
 		},
 		"PLAY": {
 			"type": "null",
-			"inputs": [
-				"propertyValue1"
-			]
+			"inputs": ["propertyValue1"]
 		},
 		"RESET": {
 			"type": "null",
-			"inputs": [
-				"propertyValue2"
-			]
+			"inputs": ["propertyValue2"]
 		},
 		"CONTROLS": {
 			"type": "play",
-			"inputs": [
-				"RESET",
-				"PLAY"
-			]
+			"inputs": ["RESET", "PLAY"]
 		}
-	},
-	"selection": [
-		"CONTROLS"
-	]
+	}
 }

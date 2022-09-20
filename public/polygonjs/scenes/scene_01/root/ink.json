@@ -6,9 +6,7 @@
 			"params": {
 				"material": "../MAT/rayMarchingBuilder1"
 			},
-			"inputs": [
-				"box1"
-			]
+			"inputs": ["box1"]
 		},
 		"box1": {
 			"type": "box",
