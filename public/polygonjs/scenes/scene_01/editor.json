@@ -15,7 +15,7 @@
 				"panelTypes": ["params"],
 				"currentPanelIndex": 0,
 				"panel_data": {
-					"active_folder": 297,
+					"active_folder": null,
 					"linkIndex": 1
 				}
 			},
@@ -27,10 +27,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 524.9334618977709,
-						"y": -626.0348476615391
+						"x": -115.58430663136467,
+						"y": -423.8598557193766
 					},
-					"zoom": 0.6809090576171877
+					"zoom": 0.7418180084228522
 				},
 				"history": {
 					"2": {
@@ -207,11 +207,10 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"currentNodes": ["/ink", "/", "/", "/", "/", "/", "/", "/"],
+	"currentNodes": ["/ink/ANIM", "/", "/", "/", "/", "/", "/", "/"],
 	"navigationHistory": {
 		"nodePaths": {
 			"1": [
-				"/",
 				"/ink",
 				"/ink/ANIM",
 				"/ink",
@@ -230,7 +229,8 @@
 				"/ink/MAT",
 				"/ink",
 				"/ink/actor1",
-				"/ink"
+				"/ink",
+				"/ink/ANIM"
 			],
 			"2": [],
 			"3": [],

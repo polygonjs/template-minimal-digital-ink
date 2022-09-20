@@ -197,9 +197,6 @@
 		"SDFUnion1": {
 			"type": "SDFUnion",
 			"params": {
-				"smooth": {
-					"overriden_options": {}
-				},
 				"sdf0": {
 					"type": "float",
 					"default_value": 0,
@@ -1643,9 +1640,6 @@
 		"SDFUnion2": {
 			"type": "SDFUnion",
 			"params": {
-				"smooth": {
-					"overriden_options": {}
-				},
 				"sdf0": {
 					"type": "float",
 					"default_value": 0,
@@ -1920,9 +1914,6 @@
 		"SDFUnion3": {
 			"type": "SDFUnion",
 			"params": {
-				"smooth": {
-					"overriden_options": {}
-				},
 				"sdf0": {
 					"type": "float",
 					"default_value": 0,
@@ -2055,9 +2046,6 @@
 		"SDFUnion4": {
 			"type": "SDFUnion",
 			"params": {
-				"smooth": {
-					"overriden_options": {}
-				},
 				"sdf0": {
 					"type": "float",
 					"default_value": 0,
@@ -2174,9 +2162,6 @@
 		"SDFUnion5": {
 			"type": "SDFUnion",
 			"params": {
-				"smooth": {
-					"overriden_options": {}
-				},
 				"sdf0": {
 					"type": "float",
 					"default_value": 0,
@@ -2750,7 +2735,7 @@
 				"cook": false,
 				"dependentOnFoundNode": true
 			},
-			"raw_input": 1,
+			"raw_input": -0.4,
 			"overriden_options": {
 				"callback": "{}"
 			}
@@ -3063,18 +3048,18 @@
 				},
 				"v_POLY_param_pos1": {
 					"type": "v3",
-					"value": [-2.7369523288105415, -8.012807324692961, -1.7466759067957624e-138]
+					"value": [0, 0, 0]
 				},
 				"v_POLY_param_pos2": {
 					"type": "v3",
-					"value": [-2.3004057767823607, -7.156983016351798, -4.9551060986301146e-49]
+					"value": [0, 0, 0]
 				},
 				"v_POLY_param_pos3": {
 					"type": "v3",
-					"value": [-0.6672191043260667, -2.762310030087494, -5.567396820452793e-23]
+					"value": [0, 0, 0]
 				},
 				"v_POLY_param_radiusMult": {
-					"value": 1
+					"value": -0.4
 				},
 				"time": {
 					"value": 0
