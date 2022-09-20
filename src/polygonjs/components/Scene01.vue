@@ -20,7 +20,7 @@ export default defineComponent({
   components: {
     PolygonjsScene,
   },
-  setup(props) {
+  setup() {
     const loadFunction = computed(() => fetchSceneAndMount_scene_01);
 
     return {
