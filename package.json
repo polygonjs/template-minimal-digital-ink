@@ -12,7 +12,7 @@
   "dependencies": {
     "@polygonjs/vue3": "^1.2.23-1",
     "core-js": "^3.8.3",
-    "polygonjs-editor": "1.2.23-2",
+    "polygonjs-editor": "1.2.26-2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
